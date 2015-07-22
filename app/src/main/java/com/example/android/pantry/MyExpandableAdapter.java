@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.List;
@@ -49,6 +49,20 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter{
 
         TextView txtListChild = (TextView) convertView.findViewById(R.id.listItem);
         txtListChild.setText(childText);
+
+        //final ImageView imgListChild = (ImageView) convertView.findViewById(R.id.list_item);
+
+        txtListChild.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                //imgListChild.setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+
+                CharSequence text = childText + " added to grocery list. Yum!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(_context,text,duration);
+                toast.show();
+            }
+        });
+
 
         return convertView;
     }
