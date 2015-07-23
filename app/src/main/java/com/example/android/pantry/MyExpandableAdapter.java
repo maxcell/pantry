@@ -1,11 +1,13 @@
 package com.example.android.pantry;
 
 import android.content.Context;
+import android.graphics.PorterDuff;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,15 +52,15 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter{
         TextView txtListChild = (TextView) convertView.findViewById(R.id.listItem);
         txtListChild.setText(childText);
 
-        //final ImageView imgListChild = (ImageView) convertView.findViewById(R.id.list_item);
+//        final ImageView imgListChild = (ImageView) convertView.findViewById(R.id.listItem);
 
-        txtListChild.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                //imgListChild.setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
+        txtListChild.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+//                imgListChild.setColorFilter(0xFFFF0000, PorterDuff.Mode.MULTIPLY);
 
                 CharSequence text = childText + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(_context,text,duration);
+                Toast toast = Toast.makeText(_context, text, duration);
                 toast.show();
             }
         });
