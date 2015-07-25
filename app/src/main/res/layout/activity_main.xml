@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android"
+    xmlns:card_view="http://schemas.android.com/apk/">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        />
+
+    <!--&lt;!&ndash;<android.support.v7.widget.RecyclerView&ndash;&gt;-->
+        <!--android:id="@+id/Recycler_View"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="60sp">-->
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/Card_View"
+            android:layout_gravity="top"
+            android:gravity="center_vertical"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            card_view:cardCornerRadius="1dp"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Text in a card"
+                android:textColor="@android:color/black"/>
+
+        </android.support.v7.widget.CardView>
+    <!--</android.support.v7.widget.RecyclerView>-->
+</RelativeLayout>
