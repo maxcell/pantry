@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 
@@ -29,16 +30,10 @@ public class MainActivity extends AppCompatActivity {
         recList.setLayoutManager(new LinearLayoutManager(this));
 
 
-        ArrayList<String> categories = new ArrayList<>();
+        ArrayList<String> categories = setupList();
 
-        categories.add("Fruits");
-        categories.add("Vegetables");
-        categories.add("Grains");
-        categories.add("Dairy");
 
         recList.setAdapter(new MyAdapter(categories));
-
-
 
     }
 
@@ -49,5 +44,16 @@ public class MainActivity extends AppCompatActivity {
         final ActionBar ab = getSupportActionBar();
         ab.setHomeAsUpIndicator(R.drawable.ic_menu);
         ab.setDisplayHomeAsUpEnabled(true);
+    }
+
+    private ArrayList<String> setupList(){
+        ArrayList<String> categories = new ArrayList<>();
+
+        categories.add("Fruits");
+        categories.add("Vegetables");
+        categories.add("Grains");
+        categories.add("Dairy");
+
+        return categories;
     }
 }
