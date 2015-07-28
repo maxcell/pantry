@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
+
         RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_View);
         recList.setHasFixedSize(true);
 
@@ -37,10 +38,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    public boolean onCreateOptionsMenu(Menu menu){
+        //Inflate the menu, which will add items to the action bar if present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
     private void setupToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        toolbar.setTitle("Pantry");
         setSupportActionBar(toolbar);
         // Show menu icon
 //        final ActionBar ab = getSupportActionBar();
