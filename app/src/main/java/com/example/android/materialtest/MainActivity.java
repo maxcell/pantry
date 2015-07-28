@@ -57,10 +57,17 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> setupList(){
         ArrayList<String> categories = new ArrayList<>();
 
+        categories.add("Baby Items");
+        categories.add("Bread/Bakery");
+        categories.add("Beverages");
+        categories.add("Cereal");
+        categories.add("Deli");
         categories.add("Fruits");
         categories.add("Vegetables");
+        categories.add("Meat");
         categories.add("Grains");
         categories.add("Dairy");
+        categories.add("Miscellaneous");
 
         return categories;
     }
