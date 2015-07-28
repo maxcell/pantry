@@ -18,12 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_View);
-//        recList.setHasFixedSize(true);
-//
-//        LinearLayoutManager llm = new LinearLayoutManager(this);
-//        llm.setOrientation(LinearLayoutManager.VERTICAL);
-//        recList.setLayoutManager(llm);
+        RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_View);
+        recList.setHasFixedSize(true);
+
+
+        recList.setLayoutManager(new LinearLayoutManager(this));
+        recList.setAdapter(new MyAdapter(7));
 
         setupToolbar();
 
