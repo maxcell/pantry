@@ -33,7 +33,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CardViewHolder> {
 
     @Override
     public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
-            cardViewHolder.setText(categories);
+            cardViewHolder.mCategory.setText(categories.get(i));
 
     }
 
@@ -43,16 +43,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CardViewHolder> {
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder{
-        public TextView mCardNum;
+        public TextView mCategory;
 
         public CardViewHolder(LinearLayout itemView){
             super(itemView);
-            mCardNum = (TextView) itemView.findViewById(R.id.text);
+            mCategory = (TextView) itemView.findViewById(R.id.text);
         }
 
-        public void setText(ArrayList<String> categories){
-            for(int i = 0; i < categories.size(); i++)
-                mCardNum.setText("This card is the category: " + categories.get(i));
-        }
     }
 }
