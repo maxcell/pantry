@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setupToolbar();
+
         RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_View);
         recList.setHasFixedSize(true);
 
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         recList.setAdapter(new MyAdapter(categories));
 
-        setupToolbar();
+
 
     }
 
