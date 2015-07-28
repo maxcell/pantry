@@ -6,15 +6,19 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * Created by Prince on 7/24/15.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CardViewHolder> {
 
+    private ArrayList<String> categories = new ArrayList<>();
     private int nCards;
 
-    public MyAdapter(int numCards){
-        nCards = numCards;
+    public MyAdapter( ArrayList<String> listOfCategories){
+
+        categories = listOfCategories;
     }
 
     @Override
@@ -29,12 +33,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CardViewHolder> {
 
     @Override
     public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
-        cardViewHolder.setText(i);
+            cardViewHolder.setText(categories);
+
     }
 
     @Override
     public int getItemCount() {
-        return nCards;
+        return categories.size();
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder{
@@ -45,6 +50,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CardViewHolder> {
             mCardNum = (TextView) itemView.findViewById(R.id.text);
         }
 
-        public void setText(int num) { mCardNum.setText("This is card " + num); }
+        public void setText(ArrayList<String> categories){
+            for(int i = 0; i < categories.size(); i++)
+                mCardNum.setText("This card is the category: " + categories.get(i));
+        }
     }
 }

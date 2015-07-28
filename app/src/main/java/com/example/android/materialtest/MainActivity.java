@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         recList.setLayoutManager(new LinearLayoutManager(this));
-        recList.setAdapter(new MyAdapter(7));
+
+
+        ArrayList<String> categories = new ArrayList<>();
+
+        categories.add("Fruits");
+        categories.add("Vegetables");
+        categories.add("Grains");
+        categories.add("Dairy");
+
+        recList.setAdapter(new MyAdapter(categories));
 
         setupToolbar();
 
