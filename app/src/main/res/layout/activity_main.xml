@@ -8,12 +8,16 @@
 
     <include
         android:id="@+id/tool_bar"
-        layout="@layout/tool_bar"></include>
+        layout="@layout/tool_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
 
-    <SlidingTabLayout
+    <tabs.SlidingTabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:background="@color/my_primary"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
