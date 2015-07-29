@@ -1,17 +1,9 @@
 package com.example.android.materialtest;
 
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.MenuItem;
-
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setupToolbar();
 
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container, new CardFragment(), "fragment_cardlist")
+                .replace(R.id.container, new CardListFragment(), "fragment_cardlist")
                 .commit();
 
 

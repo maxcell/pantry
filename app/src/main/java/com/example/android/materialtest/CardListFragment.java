@@ -13,7 +13,7 @@ import java.util.ArrayList;
 /**
  * Created by Prince on 7/28/15.
  */
-public class CardFragment extends Fragment {
+public class CardListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
