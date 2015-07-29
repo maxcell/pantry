@@ -23,18 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
         setupToolbar();
 
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, new CardFragment(), "fragment_cardlist")
+                .commit();
 
-        RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_View);
-        recList.setHasFixedSize(true);
-
-
-        recList.setLayoutManager(new LinearLayoutManager(this));
-
-
-        ArrayList<String> categories = setupList();
-
-
-        recList.setAdapter(new MyAdapter(categories));
 
     }
 
@@ -54,21 +46,4 @@ public class MainActivity extends AppCompatActivity {
 //        ab.setDisplayHomeAsUpEnabled(true);
     }
 
-    private ArrayList<String> setupList(){
-        ArrayList<String> categories = new ArrayList<>();
-
-        categories.add("Baby Items");
-        categories.add("Bread/Bakery");
-        categories.add("Beverages");
-        categories.add("Cereal");
-        categories.add("Deli");
-        categories.add("Fruits");
-        categories.add("Vegetables");
-        categories.add("Meat");
-        categories.add("Grains");
-        categories.add("Dairy");
-        categories.add("Miscellaneous");
-
-        return categories;
-    }
 }
