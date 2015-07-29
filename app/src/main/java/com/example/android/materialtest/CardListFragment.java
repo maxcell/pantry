@@ -17,28 +17,28 @@ public class CardListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        // Setting up the RecyclerView
+        // Setting up the RecyclerView with the given view
         View view = inflater.inflate(R.layout.fragment_cardlist, container, false);
-
-
-
-
         RecyclerView recList = (RecyclerView) view.findViewById(R.id.Recycler_View);
         recList.setLayoutManager(new LinearLayoutManager(super.getActivity()));
         recList.setHasFixedSize(true);
 
 
 
-
-
+        // Hard Coded Data so far
+        // Adds content onto the ArrayList
         ArrayList<String> categories = setupList();
 
 
-        recList.setAdapter(new MyAdapter(categories));
+        // Makes us use the CardListAdapter
+        // How we will convert the information for the app
+        recList.setAdapter(new CardListAdapter(categories));
 
+        // Return the view of our fragment
         return view;
     }
 
+    // Function used to create our categorical list
     private ArrayList<String> setupList(){
         ArrayList<String> categories = new ArrayList<>();
 
