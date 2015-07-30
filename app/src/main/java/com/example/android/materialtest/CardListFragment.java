@@ -43,7 +43,8 @@ public class CardListFragment extends Fragment {
     private ArrayList<String> setupList(){
         ArrayList<String> categories = new ArrayList<>();
 
-        categories.add("Baby Items");
+//        Not sure how I feel about this one yet
+//        categories.add("Baby Items");
         categories.add("Bread/Bakery");
         categories.add("Beverages");
         categories.add("Cereal");
