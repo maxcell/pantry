@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Prince on 7/28/15.
@@ -52,6 +53,11 @@ public class CardListFragment extends Fragment {
         categories.add("Meat");
         categories.add("Grains");
         categories.add("Dairy");
+
+        // Sort the contents
+        Collections.sort(categories);
+
+        // Add this last to keep any user added items out of the way
         categories.add("Miscellaneous");
 
         return categories;
