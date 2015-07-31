@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity {
         // (Currently) Name, Location, Settings
         setupToolbar();
 
-        adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n);
+        adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n, this);
 
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(adapter);
 
         mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
+        mTabs.setCustomTabView(R.layout.custom_tab, 0);
         mTabs.setDistributeEvenly(true);
 
         mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer(){
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         // Makes sure the Title is correct
         toolbar.setTitle("Pantry");
+        toolbar.style
 
 
         // Puts our toolbar on
