@@ -22,8 +22,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
     // Trying to add icons instead of titles
     private int[] imageResId ={
-            R.drawable.ic_ingr_list,
-            R.drawable.ic_shopping_cart,
+            R.drawable.ic_ingr_list_dark,
+            R.drawable.ic_shopping_cart_dark,
     };
 
     public ViewPagerAdapter(FragmentManager fm, CharSequence mTitles[], int nNumOfTabs, Context context) {

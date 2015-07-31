@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         // Makes sure the Title is correct
         toolbar.setTitle("Pantry");
-        toolbar.style
 
 
         // Puts our toolbar on
