@@ -61,7 +61,7 @@
 
             <TextView
                 android:id="@+id/storeMore"
-                android:text="More Baby Stores"
+                android:text="More Items"
                 android:padding="8dp"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:drawableLeft="@drawable/ic_arrow_forward"
