@@ -1,0 +1,28 @@
+[
+  {
+    "Bakery":
+    [
+      "Bread",
+      "Donuts",
+      "Cakes"
+    ]
+  },
+
+  {
+    "Beverages":
+    [
+      "Coke",
+      "Apple Juice",
+      "Orange Juice"
+    ]
+  },
+
+  {
+    "Fruits":
+    [
+      "Bananas",
+      "Cherries",
+      "Apples"
+    ]
+  }
+]

@@ -45,7 +45,8 @@ public class CardListFragment extends Fragment {
 
 //        Not sure how I feel about this one yet
 //        categories.add("Baby Items");
-        categories.add("Bread/Bakery");
+
+        categories.add("Bakery");
         categories.add("Beverages");
         categories.add("Cereal");
         categories.add("Deli");

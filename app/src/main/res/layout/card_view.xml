@@ -30,6 +30,8 @@
                 android:paddingRight="16dp"
                 android:textColor="@android:color/black"/>
 
+            <include layout="@layout/divider"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -40,6 +42,9 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="24dp"
                 android:textColor="@android:color/black"/>
+
+            <include layout="@layout/divider_light"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -50,6 +55,21 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:textColor="@android:color/black"/>
+
+            <include layout="@layout/divider_light"/>
+
+
+            <TextView
+                android:id="@+id/storeMore"
+                android:text="More Baby Stores"
+                android:padding="8dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:drawableLeft="@drawable/ic_arrow_forward"
+                android:drawablePadding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
         </LinearLayout>
     </android.support.v7.widget.CardView>
 </LinearLayout>
