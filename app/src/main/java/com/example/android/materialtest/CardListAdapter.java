@@ -45,10 +45,11 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
 
 
-//            for(String items : total.get((total.keySet().toArray())[i])){
-//                Log.v("ITEM", items);
                 cardViewHolder.mItems.setText(total.get((total.keySet().toArray())[0]).get(0));
-//            }
+
+//              cardViewHolder.mItem1.setText(total.get((total.keySet().toArray())[0]).get(0));
+//              cardViewHolder.mItem2.setText(total.get((total.keySet().toArray())[0]).get(1));
+//              cardViewHolder.mItem3.setText(total.get((total.keySet().toArray())[0]).get(2));
 
 
     }
@@ -61,12 +62,19 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
     public static class CardViewHolder extends RecyclerView.ViewHolder{
         public TextView mCategory;
+
         public TextView mItems;
+//        public TextView mItem1;
+//        public TextView mItem2;
+//        public TextView mItem3;
 
         public CardViewHolder(LinearLayout itemView){
             super(itemView);
             mCategory = (TextView) itemView.findViewById(R.id.text);
             mItems = (TextView) itemView.findViewById(R.id.item_view);
+//            mItem1 = (TextView) itemView.findViewById(R.id.item_view1);
+//            mItem2 = (TextView) itemView.findViewById(R.id.item_view2);
+//            mItem3 = (TextView) itemView.findViewById(R.id.item_view3);
         }
 
     }
