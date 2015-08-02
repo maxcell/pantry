@@ -37,11 +37,8 @@ public class CardListFragment extends Fragment {
         recList.setHasFixedSize(true);
 
 
-
-        // Hard Coded Data so far
-        // Adds content onto the ArrayList
-//        ArrayList<String> categories = setupList();
-
+        // Makes use of the parsing method
+        // Will sort a sorted Map into here
         Map<String, ArrayList<String>> categories = parseJSON();
 
 
@@ -53,42 +50,10 @@ public class CardListFragment extends Fragment {
         return view;
     }
 
-    // Function used to create our categorical list
-    private ArrayList<String> setupList(){
-        ArrayList<String> categories = new ArrayList<>();
-
-//        Not sure how I feel about this one yet
-//        categories.add("Baby Items");
-
-//        categories.add("Bakery");
-//        categories.add("Beverages");
-//        categories.add("Cereal");
-//        categories.add("Deli");
-//        categories.add("Fruits");
-//        categories.add("Vegetables");
-//        categories.add("Meat");
-//        categories.add("Grains");
-//        categories.add("Dairy");
-
-        Map<String, ArrayList<String>> category = parseJSON();
-        for(int i = 0; i < category.keySet().size(); i++){
-            categories.add((String) (category.keySet().toArray())[i]);
-        }
-
-
-        // Sort the contents
-        Collections.sort(categories);
-
-        // Add this last to keep any user added items out of the way
-        categories.add("Miscellaneous");
-
-//        Log.v("INSIDE", (String) (category.keySet().toArray())[0]);
-
-        return categories;
-    }
-
-
-    private String readJSON(){
+    // An accessory method that will do the reading of the file for us
+    // Will only open it up and store everything and pass the built string
+    // to parseJSON method
+    private String readFile(){
 
         String json;
         try{
@@ -107,26 +72,37 @@ public class CardListFragment extends Fragment {
         return json;
     }
 
+    // Method that will take in the string built from readFile
+    // It will do the parsing for us and storing the JSON into a TreeMap
     private Map<String, ArrayList<String>> parseJSON(){
         Map<String, ArrayList<String>> categories = new TreeMap<>();
         try{
-            JSONObject obj = new JSONObject(readJSON());
+
+            // Build a JSON Object from the file
+            JSONObject obj = new JSONObject(readFile());
+
+            // Read the array from the object
             JSONArray mJSONArray = obj.getJSONArray("groceries");
 
-
-
-
+            // Get each title of the category and the containing items
+            // Store the title in a String and the items in an ArrayList
             for(int i = 0; i < mJSONArray.length(); i++){
                 ArrayList<String> itemList = new ArrayList<>();
+
+                // Get each object (containing title and items)
                 JSONObject inArray = mJSONArray.getJSONObject(i);
+
+                // Store the title
                 String title = inArray.getString("category");
 
                 JSONArray categoryList = inArray.getJSONArray("items");
 
+                // Store the items
                 for(int j = 0; j < categoryList.length(); j++){
                 itemList.add(categoryList.getString(j));
                 }
 
+                // Add them onto the TreeMap to keep them sorted
                 categories.put(title, itemList);
             }
 
@@ -136,6 +112,7 @@ public class CardListFragment extends Fragment {
 
         finally {
 
+            // Return the resulting map
             return categories;
         }
 
