@@ -20,6 +20,8 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * Created by Prince on 7/28/15.
@@ -38,7 +40,9 @@ public class CardListFragment extends Fragment {
 
         // Hard Coded Data so far
         // Adds content onto the ArrayList
-        ArrayList<String> categories = setupList();
+//        ArrayList<String> categories = setupList();
+
+        Map<String, ArrayList<String>> categories = parseJSON();
 
 
         // Makes us use the CardListAdapter
@@ -66,7 +70,7 @@ public class CardListFragment extends Fragment {
 //        categories.add("Grains");
 //        categories.add("Dairy");
 
-        HashMap<String, ArrayList<String>> category = parseJSON();
+        Map<String, ArrayList<String>> category = parseJSON();
         for(int i = 0; i < category.keySet().size(); i++){
             categories.add((String) (category.keySet().toArray())[i]);
         }
@@ -103,8 +107,8 @@ public class CardListFragment extends Fragment {
         return json;
     }
 
-    private HashMap<String, ArrayList<String>> parseJSON(){
-        HashMap<String, ArrayList<String>> categories = new HashMap<>();
+    private Map<String, ArrayList<String>> parseJSON(){
+        Map<String, ArrayList<String>> categories = new TreeMap<>();
         try{
             JSONObject obj = new JSONObject(readJSON());
             JSONArray mJSONArray = obj.getJSONArray("groceries");
@@ -131,6 +135,7 @@ public class CardListFragment extends Fragment {
         }
 
         finally {
+
             return categories;
         }
 
