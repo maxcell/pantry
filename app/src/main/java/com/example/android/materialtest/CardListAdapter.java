@@ -1,8 +1,10 @@
 package com.example.android.materialtest;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,7 +47,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
 
 
-                cardViewHolder.mItems.setText(total.get((total.keySet().toArray())[0]).get(0));
+                cardViewHolder.mItems.setText(total.get((total.keySet().toArray())[i]).get(0));
 
 //              cardViewHolder.mItem1.setText(total.get((total.keySet().toArray())[0]).get(0));
 //              cardViewHolder.mItem2.setText(total.get((total.keySet().toArray())[0]).get(1));
@@ -72,6 +74,8 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
             super(itemView);
             mCategory = (TextView) itemView.findViewById(R.id.text);
             mItems = (TextView) itemView.findViewById(R.id.item_view);
+
+
 //            mItem1 = (TextView) itemView.findViewById(R.id.item_view1);
 //            mItem2 = (TextView) itemView.findViewById(R.id.item_view2);
 //            mItem3 = (TextView) itemView.findViewById(R.id.item_view3);
