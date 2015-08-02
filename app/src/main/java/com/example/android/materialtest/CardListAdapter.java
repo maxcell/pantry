@@ -45,10 +45,10 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
 
 
-            for(String items : total.get((total.keySet().toArray())[i])){
-                Log.v("Bitch", items);
-                cardViewHolder.mItems.setText((items));
-            }
+//            for(String items : total.get((total.keySet().toArray())[i])){
+//                Log.v("ITEM", items);
+                cardViewHolder.mItems.setText(total.get((total.keySet().toArray())[0]).get(0));
+//            }
 
 
     }
