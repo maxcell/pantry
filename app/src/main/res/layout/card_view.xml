@@ -32,23 +32,17 @@
 
             <include layout="@layout/divider"/>
 
-            <include layout="@layout/item_view"/>
+            <include layout="@layout/item_view1"/>
 
             <include layout="@layout/divider_light"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="18sp"
-                android:text="Item 2"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="16dp"
-                android:textColor="@android:color/black"/>
+            <include layout="@layout/item_view2"/>
 
             <include layout="@layout/divider_light"/>
 
+            <include layout="@layout/item_view3"/>
+
+            <include layout="@layout/divider_light"/>
 
             <TextView
                 android:id="@+id/storeMore"
