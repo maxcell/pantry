@@ -32,16 +32,7 @@
 
             <include layout="@layout/divider"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="18sp"
-                android:text="Item 1"
-                android:paddingLeft="16dp"
-                android:paddingRight="16dp"
-                android:paddingTop="16dp"
-                android:paddingBottom="24dp"
-                android:textColor="@android:color/black"/>
+            <include layout="@layout/item_view"/>
 
             <include layout="@layout/divider_light"/>
 

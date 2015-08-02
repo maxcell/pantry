@@ -1,6 +1,7 @@
 package com.example.android.materialtest;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -42,6 +43,14 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
     public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
             cardViewHolder.mCategory.setText((String) (total.keySet().toArray())[i]);
 
+
+
+            for(String items : total.get((total.keySet().toArray())[i])){
+                Log.v("Bitch", items);
+                cardViewHolder.mItems.setText((items));
+            }
+
+
     }
 
     @Override
@@ -52,10 +61,12 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
     public static class CardViewHolder extends RecyclerView.ViewHolder{
         public TextView mCategory;
+        public TextView mItems;
 
         public CardViewHolder(LinearLayout itemView){
             super(itemView);
             mCategory = (TextView) itemView.findViewById(R.id.text);
+            mItems = (TextView) itemView.findViewById(R.id.item_view);
         }
 
     }
