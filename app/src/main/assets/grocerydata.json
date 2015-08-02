@@ -1,28 +1,30 @@
-[
-  {
-    "Bakery":
-    [
-      "Bread",
-      "Donuts",
-      "Cakes"
-    ]
-  },
+{ "groceries":
+  [
+    {
+      "category": "Bakery",
+      "items": [
+        "Bread",
+        "Donuts",
+        "Cakes"
+      ]
+    },
 
-  {
-    "Beverages":
-    [
-      "Coke",
-      "Apple Juice",
-      "Orange Juice"
-    ]
-  },
+    {
+      "category": "Beverages",
+      "items": [
+        "Coke",
+        "Apple Juice",
+        "Orange Juice"
+      ]
+    },
 
-  {
-    "Fruits":
-    [
-      "Bananas",
-      "Cherries",
-      "Apples"
-    ]
-  }
-]
+    {
+      "category": "Fruits",
+      "items": [
+        "Bananas",
+        "Cherries",
+        "Apples"
+      ]
+    }
+  ]
+}
