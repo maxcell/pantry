@@ -44,7 +44,7 @@ public class CardListFragment extends Fragment {
 
         // Makes us use the CardListAdapter
         // How we will convert the information for the app
-        recList.setAdapter(new CardListAdapter(categories));
+        recList.setAdapter(new CardListAdapter(getActivity(), categories));
 
         // Return the view of our fragment
         return view;

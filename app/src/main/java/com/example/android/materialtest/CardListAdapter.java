@@ -1,5 +1,6 @@
 package com.example.android.materialtest;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,12 +22,14 @@ import java.util.TreeMap;
 public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardViewHolder> {
 
     private Map<String, ArrayList<String>> total = new TreeMap<>();
+    private Context _context;
 
     // Allows us to pass in the array list
     // Could have used the this keyword but I was lazy
-    public CardListAdapter(Map<String, ArrayList<String>> listOfStuff){
+    public CardListAdapter(Context context, Map<String, ArrayList<String>> listOfStuff){
 
         total = listOfStuff;
+        this._context = context;
     }
 
     @Override
@@ -42,16 +46,44 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
     @Override
     // Adds each individual item into a view
     // This allows each card to have different text
-    public void onBindViewHolder(CardViewHolder cardViewHolder, int i) {
-            cardViewHolder.mCategory.setText((String) (total.keySet().toArray())[i]);
+    public void onBindViewHolder(final CardViewHolder cardViewHolder, int i) {
+        cardViewHolder.mCategory.setText((String) (total.keySet().toArray())[i]);
 
+        // Setting the text for item 1 and the clickable action
+        cardViewHolder.mItem1.setText(total.get((total.keySet().toArray())[i]).get(0));
+        cardViewHolder.mItem1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
 
+                CharSequence text = cardViewHolder.mItem1.getText() + " added to grocery list. Yum!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(_context, text, duration);
+                toast.show();
+            }
+        });
 
-//                cardViewHolder.mItems.setText(total.get((total.keySet().toArray())[i]).get(0));
+        // Setting the text for item 2 and the clickable action
+        cardViewHolder.mItem2.setText(total.get((total.keySet().toArray())[i]).get(1));
+        cardViewHolder.mItem2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
 
-              cardViewHolder.mItem1.setText(total.get((total.keySet().toArray())[i]).get(0));
-              cardViewHolder.mItem2.setText(total.get((total.keySet().toArray())[i]).get(1));
-              cardViewHolder.mItem3.setText(total.get((total.keySet().toArray())[i]).get(2));
+                CharSequence text = cardViewHolder.mItem2.getText() + " added to grocery list. Yum!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(_context, text, duration);
+                toast.show();
+            }
+        });
+
+        // Setting the text for item 3 and the clickable action
+        cardViewHolder.mItem3.setText(total.get((total.keySet().toArray())[i]).get(2));
+        cardViewHolder.mItem3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+                CharSequence text = cardViewHolder.mItem3.getText() + " added to grocery list. Yum!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(_context, text, duration);
+                toast.show();
+            }
+        });
 
 
     }
