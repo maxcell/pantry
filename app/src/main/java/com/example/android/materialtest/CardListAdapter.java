@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
 import android.util.Log;
@@ -97,8 +98,8 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
                     @Override
                     public void onClick(View v) {
 
-
-
+                    Intent intent = new Intent(_context, TotalListActivity.class);
+                        _context.startActivity(intent);
                     }
                 });
     }
