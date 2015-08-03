@@ -16,4 +16,6 @@
     <color name="grey_300">#e0e0e0</color>
     <color name="grey_400">#bdbdbd</color>
     <color name="blue_700">#455ede</color>
+    <color name="pressed">#D6D6D6</color>
+    <color name="focused">#B7B7B7</color>
 </resources>
