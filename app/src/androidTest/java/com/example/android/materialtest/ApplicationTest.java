@@ -1,4 +1,4 @@
-package com.example.android.pantry;
+package com.example.android.materialtest;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
