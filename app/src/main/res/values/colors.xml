@@ -17,5 +17,5 @@
     <color name="grey_400">#bdbdbd</color>
     <color name="blue_700">#455ede</color>
     <color name="pressed">#D6D6D6</color>
-    <color name="focused">#B7B7B7</color>
+    <color name="pressed_light">#F4F4F4</color>
 </resources>
