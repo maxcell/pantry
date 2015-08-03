@@ -95,9 +95,10 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
     }
 
     public static class CardViewHolder extends RecyclerView.ViewHolder{
+        // The category
         public TextView mCategory;
 
-//        public TextView mItems;
+        // The first three items
         public TextView mItem1;
         public TextView mItem2;
         public TextView mItem3;
@@ -105,7 +106,6 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         public CardViewHolder(LinearLayout itemView){
             super(itemView);
             mCategory = (TextView) itemView.findViewById(R.id.text);
-//            mItems = (TextView) itemView.findViewById(R.id.item_view);
 
 
             mItem1 = (TextView) itemView.findViewById(R.id.item_view1);
