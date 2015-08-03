@@ -51,13 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
         mTabs.setViewPager(mPager);
 
-        // Loads in our Fragment
-        // CardList (first)
-//        getSupportFragmentManager().beginTransaction()
-//                .replace(R.id.container, new CardListFragment(), "fragment_cardlist")
-//                .commit();
-//
-
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {

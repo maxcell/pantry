@@ -1,5 +1,8 @@
 package com.example.android.materialtest;
 
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.text.Layout;
@@ -85,7 +88,19 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
             }
         });
 
+        TextView moreItems = (TextView) cardViewHolder.itemView.findViewById(R.id.storeMore);
 
+        // System.out.println((String) (total.keySet().toArray())[temp]);
+
+        moreItems.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+
+                    }
+                });
     }
 
     @Override
