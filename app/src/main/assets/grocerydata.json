@@ -1,0 +1,30 @@
+{ "groceries":
+  [
+    {
+      "category": "Bakery",
+      "items": [
+        "Bread",
+        "Donuts",
+        "Cakes"
+      ]
+    },
+
+    {
+      "category": "Beverages",
+      "items": [
+        "Coke",
+        "Apple Juice",
+        "Orange Juice"
+      ]
+    },
+
+    {
+      "category": "Fruits",
+      "items": [
+        "Bananas",
+        "Cherries",
+        "Apples"
+      ]
+    }
+  ]
+}
