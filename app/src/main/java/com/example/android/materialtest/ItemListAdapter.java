@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -35,9 +36,20 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.TextVi
     }
 
     @Override
-    public void onBindViewHolder(TextViewHolder holder, int position) {
+    public void onBindViewHolder(final TextViewHolder holder, int position) {
         String data = (GroceryStore.getInstance().getCategories().get(_category).get(position));
         holder.mItem.setText(data);
+        holder.mItem.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+
+
+
+                CharSequence text = holder.mItem.getText() + " added to grocery list. Yum!";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(_context, text, duration);
+                toast.show();
+            }
+        });
     }
 
     @Override
