@@ -30,6 +30,7 @@ public class TotalListActivity extends AppCompatActivity {
 
 
         RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_ItemList);
+        recList.addItemDecoration(new TotalDividerItemDecoration(getBaseContext().getApplicationContext()));
         recList.setHasFixedSize(true);
         LinearLayoutManager mRecentLayoutManager = new LinearLayoutManager(this);
         recList.setLayoutManager(mRecentLayoutManager);
