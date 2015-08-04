@@ -1,13 +1,8 @@
 package com.example.android.materialtest;
 
-import android.app.Activity;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -30,9 +24,9 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
     // Allows us to pass in the array list
     // Could have used the this keyword but I was lazy
-    public CardListAdapter(Context context, Map<String, ArrayList<String>> listOfStuff){
+    public CardListAdapter(Context context, GroceryStore groceryStore){
 
-        total = listOfStuff;
+        total = groceryStore.getCategories();
         this._context = context;
     }
 
@@ -91,14 +85,14 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
         TextView moreItems = (TextView) cardViewHolder.itemView.findViewById(R.id.storeMore);
 
-        // System.out.println((String) (total.keySet().toArray())[temp]);
 
         moreItems.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
-                    Intent intent = new Intent(_context, TotalListActivity.class);
+                        Intent intent = new Intent(_context, TotalListActivity.class);
+                        intent.putExtra("category", (String) cardViewHolder.mCategory.getText());
                         _context.startActivity(intent);
                     }
                 });
