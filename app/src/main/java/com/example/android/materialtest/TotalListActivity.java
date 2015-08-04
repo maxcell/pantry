@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,6 +26,16 @@ public class TotalListActivity extends AppCompatActivity {
         // Shows the Main Activity (just background at first)
         setContentView(R.layout.total_list);
         setupToolbar();
+
+
+
+        RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_ItemList);
+        recList.setHasFixedSize(true);
+        LinearLayoutManager mRecentLayoutManager = new LinearLayoutManager(this);
+        recList.setLayoutManager(mRecentLayoutManager);
+
+        recList.setAdapter(new ItemListAdapter(getBaseContext(), GroceryStore.getInstance(), getIntent().getExtras().getString("category")));
+
 
     }
 
@@ -50,7 +62,7 @@ public class TotalListActivity extends AppCompatActivity {
         // Finds layout in the res/layout
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         // Makes sure the Title is correct
-        toolbar.setTitle("Pantry");
+        toolbar.setTitle(getIntent().getExtras().getString("category"));
 
 
         // Puts our toolbar on
