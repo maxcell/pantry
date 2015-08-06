@@ -43,7 +43,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.TextVi
             public void onClick(View view) {
 
 
-
+                GroceryListAdapter.addToList((String) holder.mItem.getText());
                 CharSequence text = holder.mItem.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
