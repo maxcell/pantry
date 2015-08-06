@@ -1,6 +1,5 @@
 package com.example.android.materialtest;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
@@ -42,8 +41,8 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             return cardList;
         }
         else {
-            Tab2 tab2 = new Tab2();
-            return tab2;
+            GroceryListFragment groceryList = new GroceryListFragment();
+            return groceryList;
         }
     }
 

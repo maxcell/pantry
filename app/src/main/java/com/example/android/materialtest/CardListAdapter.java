@@ -52,7 +52,9 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         cardViewHolder.mItem1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
+                GroceryListAdapter.addToList((String) cardViewHolder.mItem1.getText());
                 CharSequence text = cardViewHolder.mItem1.getText() + " added to grocery list. Yum!";
+                System.out.println( cardViewHolder.mItem1);
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
                 toast.show();
@@ -64,6 +66,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         cardViewHolder.mItem2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
+                GroceryListAdapter.addToList((String) cardViewHolder.mItem2.getText());
                 CharSequence text = cardViewHolder.mItem2.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
@@ -76,6 +79,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         cardViewHolder.mItem3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
+                GroceryListAdapter.addToList((String) cardViewHolder.mItem3.getText());
                 CharSequence text = cardViewHolder.mItem3.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
