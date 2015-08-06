@@ -3,7 +3,6 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/Recycler_CardList"
         android:scrollbars="vertical"
@@ -12,4 +11,4 @@
 
     </android.support.v7.widget.RecyclerView>
 
-</RelativeLayout><!-- From: file:/Users/jtmyles/repositories/Pantry/app/src/main/res/layout/fragment_cardlist.xml -->
+</RelativeLayout><!-- From: file:/Users/Prince/Desktop/project/Pantry/app/src/main/res/layout/fragment_cardlist.xml -->

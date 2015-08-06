@@ -10,4 +10,4 @@
     android:paddingBottom="24dp"
     android:textColor="@android:color/black"
     android:background="@drawable/button_selector"
-    android:clickable="true"/><!-- From: file:/Users/jtmyles/repositories/Pantry/app/src/main/res/layout/item_view2.xml -->
+    android:clickable="true"/><!-- From: file:/Users/Prince/Desktop/project/Pantry/app/src/main/res/layout/item_view2.xml -->
