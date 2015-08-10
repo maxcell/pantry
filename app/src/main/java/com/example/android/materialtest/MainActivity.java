@@ -1,5 +1,6 @@
 package com.example.android.materialtest;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -8,6 +9,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 
 import tabs.SlidingTabLayout;
@@ -52,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         mTabs.setViewPager(mPager);
 
         //Download grocery database JSON from internet
-        new DownloadDataTask().execute("https://github.com/maxcell/pantry/blob/develop/grocerydata.json");
+        final DownloadDataTask downloadGroceries = new DownloadDataTask(MainActivity.this);
+        downloadGroceries.execute("https://github.com/maxcell/pantry/blob/develop/grocerydata.json");
 
     }
 
@@ -87,22 +94,65 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class DownloadDataTask extends AsyncTask<URL, Integer, String> {
+        private Context context;
+
+        public DownloadDataTask(Context context) {
+            this.context = context;
+        }
+
         protected String doInBackground(URL... urls) {
             String json;
-            /*
-            int count = urls.length;
-            long totalSize = 0;
-            for (int i = 0; i < count; i++) {
-                totalSize += Downloader.downloadFile(urls[i]);
-                publishProgress((int) ((i / (float) count) * 100));
-                // Escape early if cancel() is called
-                if (isCancelled()) break;
-            }
 
-            return totalSize;
-            */
-            downloadFile(urls[i]);
-            return json;
+            InputStream input = null;
+            OutputStream output = null;
+            HttpURLConnection connection = null;
+            try {
+                URL url = urls[0];
+                connection = (HttpURLConnection) url.openConnection();
+                connection.connect();
+
+                // expect HTTP 200 OK, so we don't mistakenly save error report
+                // instead of the file
+                if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
+                    return "Server returned HTTP " + connection.getResponseCode()
+                            + " " + connection.getResponseMessage();
+                }
+
+                // this will be useful to display download percentage
+                // might be -1: server did not report the length
+                int fileLength = connection.getContentLength();
+
+                // download the file
+                input = connection.getInputStream();
+                System.out.println(input);
+                output = new FileOutputStream("~/Desktop/");
+
+                byte data[] = new byte[4096];
+                long total = 0;
+                int count;
+
+                while ((count = input.read(data)) != -1) {
+                    total += count;
+                    // publishing the progress....
+                    if (fileLength > 0) // only if total length is known
+                        publishProgress((int) (total * 100 / fileLength));
+                    output.write(data, 0, count);
+                }
+            } catch (Exception e) {
+                return e.toString();
+            } finally {
+                try {
+                    if (output != null)
+                        output.close();
+                    if (input != null)
+                        input.close();
+                } catch (IOException ignored) {
+                }
+
+                if (connection != null)
+                    connection.disconnect();
+            }
+            return null;
         }
         protected void onProgressUpdate(Integer... progress) {
             //setProgressPercent(progress[0]);
