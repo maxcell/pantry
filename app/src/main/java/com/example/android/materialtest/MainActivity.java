@@ -1,16 +1,11 @@
 package com.example.android.materialtest;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.android.materialtest.ViewPagerAdapter;
 
 import tabs.SlidingTabLayout;
 
@@ -44,14 +39,17 @@ public class MainActivity extends AppCompatActivity {
         mTabs.setCustomTabView(R.layout.custom_tab, 0);
         mTabs.setDistributeEvenly(true);
 
-        mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer(){
+        mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
 
-            public int getIndicatorColor(int position){
+            public int getIndicatorColor(int position) {
                 return getResources().getColor(R.color.my_secondary_text);
             }
         });
 
         mTabs.setViewPager(mPager);
+
+        //Download grocery database JSON from internet
+        //new DownloadDataTask().execute("https://github.com/jtmyles/grocerydata.json");
 
     }
 
@@ -84,4 +82,30 @@ public class MainActivity extends AppCompatActivity {
         // Puts our toolbar on
         setSupportActionBar(toolbar);
     }
+    /*
+    private class DownloadDataTask extends AsyncTask<URL, Integer, String> {
+        protected String doInBackground(URL... urls) {
+
+            /*
+            int count = urls.length;
+            long totalSize = 0;
+            for (int i = 0; i < count; i++) {
+                totalSize += Downloader.downloadFile(urls[i]);
+                publishProgress((int) ((i / (float) count) * 100));
+                // Escape early if cancel() is called
+                if (isCancelled()) break;
+            }
+
+            return totalSize;
+            //close comment here
+            downloadFile(urls[i]);
+        }
+        protected void onProgressUpdate(Integer... progress) {
+            //setProgressPercent(progress[0]);
+        }
+        protected void onPostExecute(String json) {
+            super.onPostExecute(json);
+            //showDialog("Downloaded " + result + " bytes");
+        }
+    } */
 }
