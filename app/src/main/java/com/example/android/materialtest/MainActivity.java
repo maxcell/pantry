@@ -1,11 +1,14 @@
 package com.example.android.materialtest;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.net.URL;
 
 import tabs.SlidingTabLayout;
 
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         mTabs.setViewPager(mPager);
 
         //Download grocery database JSON from internet
-        //new DownloadDataTask().execute("https://github.com/jtmyles/grocerydata.json");
+        new DownloadDataTask().execute("https://github.com/maxcell/pantry/blob/develop/grocerydata.json");
 
     }
 
@@ -82,10 +85,10 @@ public class MainActivity extends AppCompatActivity {
         // Puts our toolbar on
         setSupportActionBar(toolbar);
     }
-    /*
+
     private class DownloadDataTask extends AsyncTask<URL, Integer, String> {
         protected String doInBackground(URL... urls) {
-
+            String json;
             /*
             int count = urls.length;
             long totalSize = 0;
@@ -97,8 +100,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
             return totalSize;
-            //close comment here
+            */
             downloadFile(urls[i]);
+            return json;
         }
         protected void onProgressUpdate(Integer... progress) {
             //setProgressPercent(progress[0]);
@@ -107,5 +111,5 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(json);
             //showDialog("Downloaded " + result + " bytes");
         }
-    } */
+    }
 }
