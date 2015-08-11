@@ -5,10 +5,13 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -41,12 +44,16 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
         // (Currently) Name, Location, Settings
         setupToolbar();
 
-        adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n, this);
+        ;
 
         mPager = (ViewPager) findViewById(R.id.pager);
         if(mPager == null){
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+            final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.Recycler_CardList);
+            recyclerView.setAdapter(linearLayoutManager);
 
         }else {
+            adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n, this);
             mPager.setAdapter(adapter);
 
             mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
@@ -61,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
             });
 
             mTabs.setViewPager(mPager);
+        }
 
             String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
 
@@ -74,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
             } catch (ExecutionException e) {
                 e.printStackTrace();
             }
-        }
+
 
     }
 
