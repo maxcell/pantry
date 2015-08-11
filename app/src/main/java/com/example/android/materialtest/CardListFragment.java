@@ -15,14 +15,23 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
 
 /**
  * Created by Prince on 7/28/15.
+ * CacheDir created by Justin on 8/10/15
  */
 public class CardListFragment extends Fragment {
+
+
+    public interface ITalkToFragment { //the fragment to which this interface communicates implements CursorLoader
+        void handleOutputStream(OutputStream stream);
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -53,11 +62,18 @@ public class CardListFragment extends Fragment {
     // An accessory method that will do the reading of the file for us
     // Will only open it up and store everything and pass the built string
     // to parseJSON method
+
     private String readFile(){
+
+        //File CacheDir = new File(getActivity().getCacheDir().getPath() + "/grocerydata.json");
 
         String json;
         try{
             InputStream is = getActivity().getAssets().open("grocerydata.json");
+            //InputStream is = new FileInputStream("file://" + Environment.getExternalStorageDirectory().getPath() + "/grocerydata.json");
+
+
+
             int size = is.available();
             byte[] buffer = new byte[size];
 
@@ -72,6 +88,7 @@ public class CardListFragment extends Fragment {
         return json;
     }
 
+
     // Method that will take in the string built from readFile
     // It will do the parsing for us and storing the JSON into a TreeMap
     private Map<String, ArrayList<String>> parseJSON(){
@@ -79,7 +96,10 @@ public class CardListFragment extends Fragment {
         try{
 
             // Build a JSON Object from the file
-            JSONObject obj = new JSONObject(readFile());
+            //JSONObject obj = new JSONObject(readFile());
+
+            // Build a JSON Object from the MainActivity input
+            JSONObject obj = new JSONObject(MainActivity.jsonString);
 
             // Read the array from the object
             JSONArray mJSONArray = obj.getJSONArray("groceries");

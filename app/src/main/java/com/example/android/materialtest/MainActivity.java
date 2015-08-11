@@ -6,20 +6,21 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.concurrent.ExecutionException;
 
 import tabs.SlidingTabLayout;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements CardListFragment.ITalkToFragment{
 
     private ViewPager mPager;
     private ViewPagerAdapter adapter;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private CharSequence titles[] = {"Stores", "List"};
     int n = 2;      // Where n is the number of tabs
 
+    public static String jsonString;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Standard Necessities for the app
@@ -57,11 +59,22 @@ public class MainActivity extends AppCompatActivity {
 
         mTabs.setViewPager(mPager);
 
+        String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
+
         //Download grocery database JSON from internet
         final DownloadDataTask downloadGroceries = new DownloadDataTask(MainActivity.this);
-        downloadGroceries.execute("https://github.com/maxcell/pantry/blob/develop/grocerydata.json");
+
+        try {
+            jsonString = downloadGroceries.execute(dataUrl).get();
+            //Log.v("jsonValue",jsonString);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
     }
+
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu, which will add items to the action bar if present.
@@ -93,23 +106,33 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    private class DownloadDataTask extends AsyncTask<URL, Integer, String> {
+    @Override
+    public void handleOutputStream(OutputStream stream) {
+
+    }
+
+
+    private class DownloadDataTask extends AsyncTask<String, Integer, String> {
         private Context context;
 
         public DownloadDataTask(Context context) {
             this.context = context;
         }
 
-        protected String doInBackground(URL... urls) {
+        @Override
+        protected String doInBackground(String... urls) {
             String json;
 
             InputStream input = null;
             OutputStream output = null;
             HttpURLConnection connection = null;
             try {
-                URL url = urls[0];
+                URL url = new URL(urls[0]);
+                Log.v("url",urls[0]);
                 connection = (HttpURLConnection) url.openConnection();
                 connection.connect();
+
+                Log.v("connection", connection.toString());
 
                 // expect HTTP 200 OK, so we don't mistakenly save error report
                 // instead of the file
@@ -117,27 +140,26 @@ public class MainActivity extends AppCompatActivity {
                     return "Server returned HTTP " + connection.getResponseCode()
                             + " " + connection.getResponseMessage();
                 }
-
+                Log.v("Server returned HTTP " ,connection.getResponseCode()
+                        + " " + connection.getResponseMessage());
                 // this will be useful to display download percentage
                 // might be -1: server did not report the length
                 int fileLength = connection.getContentLength();
 
+                Log.v("FileLength:", new String(fileLength +""));
                 // download the file
                 input = connection.getInputStream();
-                System.out.println(input);
-                output = new FileOutputStream("~/Desktop/");
 
-                byte data[] = new byte[4096];
-                long total = 0;
-                int count;
+                //Log.v("input", input.toString());
 
-                while ((count = input.read(data)) != -1) {
-                    total += count;
-                    // publishing the progress....
-                    if (fileLength > 0) // only if total length is known
-                        publishProgress((int) (total * 100 / fileLength));
-                    output.write(data, 0, count);
-                }
+
+                int size = input.available();
+                byte[] buffer = new byte[1000000];
+
+                input.read(buffer);
+                input.close();
+                json = new String(buffer, "UTF-8");
+
             } catch (Exception e) {
                 return e.toString();
             } finally {
@@ -152,14 +174,16 @@ public class MainActivity extends AppCompatActivity {
                 if (connection != null)
                     connection.disconnect();
             }
-            return null;
+            return json;
         }
         protected void onProgressUpdate(Integer... progress) {
+            super.onProgressUpdate(progress[0]);
             //setProgressPercent(progress[0]);
         }
         protected void onPostExecute(String json) {
             super.onPostExecute(json);
-            //showDialog("Downloaded " + result + " bytes");
         }
+
+
     }
 }
