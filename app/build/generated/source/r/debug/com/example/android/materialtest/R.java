@@ -1889,10 +1889,11 @@ containing a value of this type.
         public static final int abc_action_bar_embed_tabs=0x7f090002;
         public static final int abc_action_bar_embed_tabs_pre_jb=0x7f090000;
         public static final int abc_action_bar_expanded_action_views_exclusive=0x7f090003;
-        public static final int abc_config_actionMenuItemAllCaps=0x7f090004;
+        public static final int abc_config_actionMenuItemAllCaps=0x7f090005;
         public static final int abc_config_allowActionMenuItemTextWithIcon=0x7f090001;
-        public static final int abc_config_closeDialogWhenTouchOutside=0x7f090005;
-        public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f090006;
+        public static final int abc_config_closeDialogWhenTouchOutside=0x7f090006;
+        public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f090007;
+        public static final int isTablet=0x7f090004;
     }
     public static final class color {
         public static final int abc_background_cache_hint_selector_material_dark=0x7f0b004e;

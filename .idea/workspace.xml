@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6ac0990f-b91b-46ad-a90e-50e6972ec7a0" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_main.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_cardlist.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_grocerylist.xml" />
@@ -672,6 +673,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-zh-rTW/values-zh-rTW.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-zh-rTW/values-zh-rTW.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-zu/values-zu.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values-zu/values-zu.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/debug/values/values.xml" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/android/materialtest/GroceryListFragment.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/android/materialtest/GroceryListFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pantry.iws" />
@@ -701,13 +709,27 @@
               <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
 =======
             <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
               <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
               <folding />
+=======
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1683#1877#0" expanded="true" />
+                <element signature="e#1876#1877#0" expanded="true" />
+                <element signature="e#3506#3507#0" expanded="true" />
+                <element signature="e#3552#3553#0" expanded="true" />
+                <element signature="e#5699#5700#0" expanded="true" />
+                <element signature="e#5748#5749#0" expanded="true" />
+              </folding>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -716,6 +738,14 @@
               <folding>
                 <element signature="e#275#293#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="GroceryListAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+              <folding />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
             </state>
           </provider>
         </entry>
@@ -747,6 +777,7 @@
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -767,6 +798,10 @@
                 <element signature="imports" expanded="true" />
               </folding>
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
+=======
+              <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+              <folding />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
             </state>
           </provider>
           <provider editor-type-id="android-designer">
@@ -774,11 +809,19 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.344828">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="24" selection-end-column="39" />
+=======
+      <file leaf-file-name="CardListFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
               <folding />
             </state>
           </provider>
@@ -819,11 +862,19 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="fragment_grocerylist.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_grocerylist.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.137931">
               <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+=======
+      <file leaf-file-name="GroceryListFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.990566">
+              <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
               <folding />
             </state>
           </provider>
@@ -832,8 +883,35 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 =======
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
+=======
+      <file leaf-file-name="GroceryService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleItemTouchHelperCallback.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/SimpleItemTouchHelperCallback.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -1912,7 +1990,11 @@
 =======
     <option name="modificationStamps">
       <map>
+<<<<<<< HEAD
         <entry key="$PROJECT_DIR$" value="4315835021000" />
+=======
+        <entry key="$PROJECT_DIR$" value="4313853101000" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       </map>
     </option>
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
@@ -2119,18 +2201,33 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_grocerylist.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemListAdapter.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListFragment.java" />
+=======
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/SwipeDismissTouchListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/SwipeDismissListViewTouchListener.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/SimpleItemHelperCallback.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemTouchHelperAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemTouchHelperViewHolder.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListAdapter.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_cardlist.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_grocerylist.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/MainActivity.java" />
+=======
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       </list>
     </option>
   </component>
@@ -2207,6 +2304,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Pantry" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -2482,6 +2583,7 @@
 =======
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
           </PATH>
+<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Pantry" />
@@ -2556,18 +2658,30 @@
       <pane id="ProjectPane" />
       <pane id="PackagesPane" />
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
+=======
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="recentsLimit" value="5" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.WIDTH" value="213" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="01778ece9e9bb17c" />
+<<<<<<< HEAD
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Galaxy_Nexus_API_21" />
+=======
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_22_x86" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="DEBUGGABLE_DEVICE" value="lge-lgls740-01778ece9e9bb17c" />
+    <property name="DEBUGGABLE_PROCESS" value="com.example.android.materialtest" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -2785,22 +2899,37 @@
   </component>
   <component name="ToolWindowManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
 =======
     <frame x="53" y="23" width="1387" height="877" extended-state="6" />
     <editor active="false" />
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
+=======
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19170243" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
+=======
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19170243" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287841" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32754344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32754344" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
 =======
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32760897" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -2814,6 +2943,9 @@
 =======
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30769232" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285151" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.325887" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -2821,6 +2953,7 @@
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
@@ -2832,6 +2965,10 @@
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
@@ -2856,11 +2993,12 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/TotalDividerItemDecoration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3008,6 +3146,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3020,7 +3160,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+          </folding>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
       </provider>
     </entry>
@@ -3040,7 +3187,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="33" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="33" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1683#1877#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#3506#3507#0" expanded="true" />
+            <element signature="e#3552#3553#0" expanded="true" />
+            <element signature="e#5699#5700#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+          </folding>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
       </provider>
     </entry>
@@ -3093,7 +3252,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="e#2554#2555#0" expanded="true" />
+            <element signature="e#2701#2702#0" expanded="true" />
+          </folding>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
       </provider>
     </entry>
@@ -3113,7 +3279,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="33" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="33" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1683#1877#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#3506#3507#0" expanded="true" />
+            <element signature="e#3552#3553#0" expanded="true" />
+            <element signature="e#5699#5700#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+          </folding>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
       </provider>
     </entry>
@@ -3292,6 +3470,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33962265">
@@ -3312,6 +3491,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemListAdapter.java">
+=======
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/os/Environment.java">
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
@@ -3344,6 +3526,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding>
+<<<<<<< HEAD
             <element signature="imports" expanded="false" />
             <element signature="e#1735#2176#0" expanded="false" />
             <element signature="e#2175#2176#0" expanded="false" />
@@ -3353,6 +3536,10 @@
             <element signature="e#4011#4012#0" expanded="false" />
             <element signature="e#4109#4110#0" expanded="false" />
             <element signature="e#4153#4154#0" expanded="false" />
+=======
+            <element signature="e#11491#11492#0" expanded="false" />
+            <element signature="e#11553#11554#0" expanded="false" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
           </folding>
         </state>
       </provider>
@@ -3365,9 +3552,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_view1.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.805169">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/TotalListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4612326">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/view/ViewGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9830189">
+          <caret line="3576" column="0" selection-start-line="3576" selection-start-column="0" selection-end-line="3576" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-22/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2754717">
+          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemTouchHelperViewHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8207547">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
             <element signature="e#275#293#0" expanded="true" />
@@ -3379,6 +3626,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32934132">
           <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+=======
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
           <folding />
         </state>
       </provider>
@@ -3386,7 +3636,21 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_grocerylist.xml">
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemTouchHelperAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryService.java">
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.137931">
           <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
@@ -3397,21 +3661,38 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_cardlist.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6551723">
           <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/SimpleItemTouchHelperCallback.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
       </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/card_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="15.310345">
           <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
           <folding />
         </state>
       </provider>
@@ -3419,14 +3700,22 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3462,6 +3751,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.379311">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1683#1877#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#3506#3507#0" expanded="true" />
+            <element signature="e#3552#3553#0" expanded="true" />
+            <element signature="e#5699#5700#0" expanded="true" />
+            <element signature="e#5748#5749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/ItemListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
           <folding />
         </state>
       </provider>
@@ -3469,6 +3780,7 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5377358">
@@ -3490,6 +3802,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
           <folding />
         </state>
       </provider>
@@ -3497,6 +3815,7 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/CardListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2783505">
@@ -3505,6 +3824,13 @@
             <element signature="imports" expanded="true" />
           </folding>
 >>>>>>> 3e09f6e62cc986cd6c3eae2c97e39f2fd17dae01
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.990566">
+          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+          <folding />
+>>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
       </provider>
     </entry>

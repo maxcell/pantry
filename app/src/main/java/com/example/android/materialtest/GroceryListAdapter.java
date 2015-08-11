@@ -11,9 +11,20 @@ import java.util.ArrayList;
 /**
  * Created by Justin on 8/4/15.
  */
-public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.TextViewHolder> {
+public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.TextViewHolder> implements ItemTouchHelperAdapter{
     private Context _context;
     private static ArrayList<String> userList;
+
+    @Override
+    public boolean onItemMove(int fromPosition, int toPosition) {
+        return false;
+    }
+
+    @Override
+    public void onItemDismiss(int position) {
+        remove(getItem(position));
+        GroceryListFragment.mAdapter.notifyDataSetChanged();
+    }
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -66,5 +77,16 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.
             userList.add(s);
             GroceryListFragment.mAdapter.notifyDataSetChanged();
         }
+    }
+
+    public static void remove(String s){
+        if(userList.contains(s)){
+            userList.remove(s);
+            GroceryListFragment.mAdapter.notifyDataSetChanged();
+        }
+    }
+
+    public static String getItem(int position){
+        return userList.get(position);
     }
 }
