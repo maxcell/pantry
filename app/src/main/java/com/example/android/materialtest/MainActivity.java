@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
             });
 
             mTabs.setViewPager(mPager);
-        
+
 
             String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
 
