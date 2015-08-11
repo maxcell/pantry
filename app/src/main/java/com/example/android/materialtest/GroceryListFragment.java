@@ -18,10 +18,14 @@ import java.util.ArrayList;
  */
 public class GroceryListFragment extends Fragment{
     public static GroceryListAdapter mAdapter;
+    public View view;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_grocerylist, container, false);
-        RecyclerView grocList = (RecyclerView) v.findViewById(R.id.Recycler_GroceryList);
+        //container.removeAllViews();
+        view = inflater.inflate(R.layout.fragment_grocerylist, container, false);
+
+        RecyclerView grocList = (RecyclerView) view.findViewById(R.id.Recycler_GroceryList);
         grocList.setLayoutManager(new LinearLayoutManager(super.getActivity()));
         grocList.setHasFixedSize(true);
 
@@ -34,8 +38,31 @@ public class GroceryListFragment extends Fragment{
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
         touchHelper.attachToRecyclerView(grocList);
 
-        return grocList;
+        return view;
     }
 
-    }
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+////        if (view != null) {
+////            ViewGroup parentViewGroup = (ViewGroup) view.getParent();
+////            if (parentViewGroup != null) {
+////                parentViewGroup.removeAllViews();
+////            }
+////        }
+//    }
+//
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+//        if (view != null) {
+//            ViewGroup parentViewGroup = (ViewGroup) view.getParent();
+//            if (parentViewGroup != null) {
+//                parentViewGroup.removeAllViewsInLayout();
+//            }
+//        }
+//    }
+
+
+}
 

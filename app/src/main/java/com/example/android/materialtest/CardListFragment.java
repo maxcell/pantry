@@ -26,7 +26,7 @@ import java.util.TreeMap;
  */
 public class CardListFragment extends Fragment {
 
-
+    public View view;
     public interface ITalkToFragment { //the fragment to which this interface communicates implements CursorLoader
         void handleOutputStream(OutputStream stream);
     }
@@ -34,9 +34,12 @@ public class CardListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-
+        //container.removeAllViews();
         // Setting up the RecyclerView with the given view
         View view = inflater.inflate(R.layout.fragment_cardlist, container, false);
+//        if (view.getParent() != null) {
+//            ((ViewGroup) view.getParent()).removeView(view);
+//        }
         RecyclerView recList = (RecyclerView) view.findViewById(R.id.Recycler_CardList);
         recList.setLayoutManager(new LinearLayoutManager(super.getActivity()));
         recList.setHasFixedSize(true);
@@ -132,4 +135,21 @@ public class CardListFragment extends Fragment {
         }
 
     }
+
+//    @Override
+//    public void onStop() {
+//        super.onStop();
+//    }
+//
+//    @Override
+//    public void onDestroyView() {
+//        super.onDestroyView();
+//        if (view != null) {
+//            ViewGroup parentViewGroup = (ViewGroup) view.getParent();
+//            if (parentViewGroup != null) {
+//                parentViewGroup.removeAllViewsInLayout();
+//            }
+//        }
+//    }
+
 }
