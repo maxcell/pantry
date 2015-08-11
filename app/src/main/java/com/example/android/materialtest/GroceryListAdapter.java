@@ -62,7 +62,9 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.
     }
 
     public static void addToList(String s){
-        userList.add(s);
-        GroceryListFragment.mAdapter.notifyDataSetChanged();
+        if(! userList.contains(s)) {
+            userList.add(s);
+            GroceryListFragment.mAdapter.notifyDataSetChanged();
+        }
     }
 }

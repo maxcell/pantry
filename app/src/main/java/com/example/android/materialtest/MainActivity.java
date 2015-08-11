@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
     private SlidingTabLayout mTabs;
     private CharSequence titles[] = {"Stores", "List"};
     int n = 2;      // Where n is the number of tabs
-
     public static String jsonString;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Standard Necessities for the app
@@ -66,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
 
         try {
             jsonString = downloadGroceries.execute(dataUrl).get();
-            //Log.v("jsonValue",jsonString);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -140,8 +139,8 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
                     return "Server returned HTTP " + connection.getResponseCode()
                             + " " + connection.getResponseMessage();
                 }
-                Log.v("Server returned HTTP " ,connection.getResponseCode()
-                        + " " + connection.getResponseMessage());
+
+
                 // this will be useful to display download percentage
                 // might be -1: server did not report the length
                 int fileLength = connection.getContentLength();
@@ -149,8 +148,6 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
                 Log.v("FileLength:", new String(fileLength +""));
                 // download the file
                 input = connection.getInputStream();
-
-                //Log.v("input", input.toString());
 
 
                 int size = input.available();

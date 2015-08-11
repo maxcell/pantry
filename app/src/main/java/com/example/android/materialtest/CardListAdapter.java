@@ -54,7 +54,6 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
 
                 GroceryListAdapter.addToList((String) cardViewHolder.mItem1.getText());
                 CharSequence text = cardViewHolder.mItem1.getText() + " added to grocery list. Yum!";
-                System.out.println( cardViewHolder.mItem1);
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
                 toast.show();

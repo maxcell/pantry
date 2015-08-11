@@ -22,7 +22,7 @@ import java.util.TreeMap;
 
 /**
  * Created by Prince on 7/28/15.
- * CacheDir created by Justin on 8/10/15
+ * Access MainActivity.jsonString added 8/11/15
  */
 public class CardListFragment extends Fragment {
 
@@ -65,14 +65,9 @@ public class CardListFragment extends Fragment {
 
     private String readFile(){
 
-        //File CacheDir = new File(getActivity().getCacheDir().getPath() + "/grocerydata.json");
-
         String json;
         try{
             InputStream is = getActivity().getAssets().open("grocerydata.json");
-            //InputStream is = new FileInputStream("file://" + Environment.getExternalStorageDirectory().getPath() + "/grocerydata.json");
-
-
 
             int size = is.available();
             byte[] buffer = new byte[size];
