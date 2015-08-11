@@ -44,32 +44,36 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
         adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n, this);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(adapter);
+        if(mPager == null){
 
-        mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
-        mTabs.setCustomTabView(R.layout.custom_tab, 0);
-        mTabs.setDistributeEvenly(true);
+        }else {
+            mPager.setAdapter(adapter);
 
-        mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
+            mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
+            mTabs.setCustomTabView(R.layout.custom_tab, 0);
+            mTabs.setDistributeEvenly(true);
 
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.my_secondary_text);
+            mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
+
+                public int getIndicatorColor(int position) {
+                    return getResources().getColor(R.color.my_secondary_text);
+                }
+            });
+
+            mTabs.setViewPager(mPager);
+
+            String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
+
+            //Download grocery database JSON from internet
+            final DownloadDataTask downloadGroceries = new DownloadDataTask(MainActivity.this);
+
+            try {
+                jsonString = downloadGroceries.execute(dataUrl).get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
             }
-        });
-
-        mTabs.setViewPager(mPager);
-
-        String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
-
-        //Download grocery database JSON from internet
-        final DownloadDataTask downloadGroceries = new DownloadDataTask(MainActivity.this);
-
-        try {
-            jsonString = downloadGroceries.execute(dataUrl).get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
         }
 
     }

@@ -8,6 +8,12 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="22" />
 
+    <supports-screens
+        android:anyDensity="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />

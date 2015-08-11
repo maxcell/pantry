@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true" android:drawable="@color/pressed_light" />
     <item android:drawable="@color/my_icons" />
-</selector><!-- From: file:/Users/jtmyles/repositories/Pantry/app/src/main/res/drawable/button_selector.xml -->
+</selector><!-- From: file:/Users/Prince/Desktop/project/pantry/app/src/main/res/drawable/button_selector.xml -->
