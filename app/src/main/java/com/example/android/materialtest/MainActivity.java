@@ -44,15 +44,15 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
         // (Currently) Name, Location, Settings
         setupToolbar();
 
-        ;
+        boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
 
-        mPager = (ViewPager) findViewById(R.id.pager);
-        if(mPager == null){
+        if(tabletSize){
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
             final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.Recycler_CardList);
             recyclerView.setAdapter(linearLayoutManager);
 
         }else {
+            mPager = (ViewPager) findViewById(R.id.pager);
             adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n, this);
             mPager.setAdapter(adapter);
 
