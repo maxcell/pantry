@@ -1,6 +1,7 @@
 package com.example.android.materialtest;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -60,7 +61,17 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
                 }
             });
 
+        if (!((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK)
+                >= Configuration.SCREENLAYOUT_SIZE_XLARGE)) {
             mTabs.setViewPager(mPager);
+        }else{
+            if (getResources().getConfiguration().orientation == 2){
+
+            } else {
+                mTabs.setViewPager(mPager);
+            }
+        }
+
 
 
             String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";

@@ -3,11 +3,6 @@
     <!-- From: file:/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-xlarge/values-xlarge.xml -->
     <eat-comment/>
     <bool name="abc_action_bar_expanded_action_views_exclusive">false</bool>
-    <!-- From: file:/Users/Prince/Desktop/project/pantry/app/src/main/res/values-xlarge/device.xml -->
-    <eat-comment/>
-    <bool name="isTablet">true</bool>
-    <!-- From: file:/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-xlarge/values-xlarge.xml -->
-    <eat-comment/>
     <dimen name="abc_search_view_text_min_width">192dip</dimen>
     <item name="dialog_fixed_height_major" type="dimen">60%</item>
     <item name="dialog_fixed_height_minor" type="dimen">90%</item>

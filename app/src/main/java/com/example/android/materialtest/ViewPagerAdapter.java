@@ -1,6 +1,7 @@
 package com.example.android.materialtest;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -61,5 +62,22 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return nTabs;
+    }
+
+    @Override
+    public float getPageWidth(int position){
+        float nbPages;
+        if(isTablet(context) && (context.getResources().getConfiguration().orientation == 2)){
+            nbPages = 2;
+        } else {
+            nbPages = 1;
+        }
+
+        return (1 / nbPages);
+    }
+
+    public static boolean isTablet(Context context){
+        return (context.getResources().getConfiguration().screenLayout
+                    & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
     }
 }
