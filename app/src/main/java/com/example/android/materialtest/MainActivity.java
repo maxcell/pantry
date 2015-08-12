@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
             });
 
         if (!((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK)
-                >= Configuration.SCREENLAYOUT_SIZE_XLARGE)) {
+                >= Configuration.SCREENLAYOUT_SIZE_LARGE)) {
             mTabs.setViewPager(mPager);
         }else{
             if (getResources().getConfiguration().orientation == 2){
