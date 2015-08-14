@@ -14,6 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.parse.Parse;
+import com.parse.ParseObject;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -72,7 +75,14 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
             }
         }
 
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
 
+        Parse.initialize(this, "Ntyum0Q9BoJ5TPTumeztgJTNM7ErmYhdfYVDe2lu", "wRWMqxsHldxfP6Rfs4mjlPDd8kdcybOBX59lu5mx");
+
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("foo", "bar");
+        testObject.saveInBackground();
 
             String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
 
@@ -169,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
 
 
                 int size = input.available();
-                byte[] buffer = new byte[1000000];
+                byte[] buffer = new byte[4000000];
 
                 input.read(buffer);
                 input.close();

@@ -2,32 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
+        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-61032a760f7b1fdde418ebfc6ac6f218cc435f8b.jar" />
-    </item>
-    <item
-        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="f8efd0096475e0daf054267b61544e10dc776503">
-        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-dc27f6aecd8bfbffbad807f7bb5fac3e9be7bdc0.jar" />
-    </item>
-    <item
-        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="e1fa5e1123997a55e3ed65b44892993ff4b58cfe">
-        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-0f694a7a52ca6d5af418916885508ffde795a949.jar" />
-    </item>
-    <item
-        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-7cd50a42b61d1caf27276d368e34e781297791ed.jar" />
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-55b6b2dd12133a048a39e69d6e21cd410ddaf5cf.jar" />
     </item>
     <item
         jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/design/22.2.1/jars/classes.jar"
@@ -37,18 +16,53 @@
         <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-d036d893f228acdea57dcc24a08247133ec16aa3.jar" />
     </item>
     <item
+        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-7cd50a42b61d1caf27276d368e34e781297791ed.jar" />
+    </item>
+    <item
+        jar="/Users/Prince/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.0/6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd/bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-27f8de5cb9860816aae4366e0156ec6c8f9ae545.jar" />
+    </item>
+    <item
+        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-dc27f6aecd8bfbffbad807f7bb5fac3e9be7bdc0.jar" />
+    </item>
+    <item
+        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-61032a760f7b1fdde418ebfc6ac6f218cc435f8b.jar" />
+    </item>
+    <item
+        jar="/Users/Prince/Desktop/project/pantry/app/libs/Parse-1/Parse-1.10.0.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="4ac868f746cc1f50c3fd155110790cf80c1dd346">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/Parse-1.10.0-aa48b27028cc3f2d175fa94e1aac002051b1d1d3.jar" />
+    </item>
+    <item
+        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0 rc3"
+        sha1="e1fa5e1123997a55e3ed65b44892993ff4b58cfe">
+        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/classes-0f694a7a52ca6d5af418916885508ffde795a949.jar" />
+    </item>
+    <item
         jar="/Users/Prince/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
         jumboMode="false"
         revision="23.0.0 rc3"
         sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
         <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-b2cedca9f74413e754fd52c4955d48af39a914ef.jar" />
-    </item>
-    <item
-        jar="/Users/Prince/Desktop/project/pantry/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
-        jumboMode="false"
-        revision="23.0.0 rc3"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/Users/Prince/Desktop/project/pantry/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-55b6b2dd12133a048a39e69d6e21cd410ddaf5cf.jar" />
     </item>
 
 </items>
