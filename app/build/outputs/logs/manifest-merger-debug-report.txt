@@ -33,7 +33,7 @@ MERGED from com.android.support:support-v4:22.2.1:22:5
 		ADDED from AndroidManifest.xml:7:9
 	android:theme
 		ADDED from AndroidManifest.xml:9:9
-activity#com.example.android.materialtest.MainActivity
+activity#com.example.android.materialtest.ActivityMain
 ADDED from AndroidManifest.xml:11:9
 	android:label
 		ADDED from AndroidManifest.xml:13:13
@@ -49,7 +49,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:17:17
 	android:name
 		ADDED from AndroidManifest.xml:17:27
-activity#com.example.android.materialtest.TotalListActivity
+activity#com.example.android.materialtest.ActivityTotalList
 ADDED from AndroidManifest.xml:20:9
 	android:name
 		ADDED from AndroidManifest.xml:20:19

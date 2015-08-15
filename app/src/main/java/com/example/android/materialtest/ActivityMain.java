@@ -6,13 +6,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
@@ -29,10 +26,10 @@ import java.util.concurrent.ExecutionException;
 import tabs.SlidingTabLayout;
 
 
-public class MainActivity extends AppCompatActivity implements CardListFragment.ITalkToFragment{
+public class ActivityMain extends AppCompatActivity implements FragmentCardList.ITalkToFragment{
 
     private ViewPager mPager;
-    private ViewPagerAdapter adapter;
+    private AdapterViewPager adapter;
     private SlidingTabLayout mTabs;
     private CharSequence titles[] = {"Stores", "List"};
     int n = 2;      // Where n is the number of tabs
@@ -52,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
 
 
             mPager = (ViewPager) findViewById(R.id.pager);
-            adapter = new ViewPagerAdapter(getSupportFragmentManager(), titles, n, this);
+            adapter = new AdapterViewPager(getSupportFragmentManager(), titles, n, this);
             mPager.setAdapter(adapter);
 
             mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
@@ -78,24 +75,24 @@ public class MainActivity extends AppCompatActivity implements CardListFragment.
         }
 
         // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-
-        ParseObject.registerSubclass(ParsePantry.class);
-        Parse.initialize(this, "Ntyum0Q9BoJ5TPTumeztgJTNM7ErmYhdfYVDe2lu", "wRWMqxsHldxfP6Rfs4mjlPDd8kdcybOBX59lu5mx");
-
-        ParseUser.enableAutomaticUser();
-        ParseACL defaultACL = new ParseACL();
-        ParseACL.setDefaultACL(defaultACL, true);
-
-        ParsePantry testObject = new ParsePantry();
-        testObject.setTitle("test");
-        testObject.setAuthor(ParseUser.getCurrentUser());
-        testObject.saveInBackground();
+//        Parse.enableLocalDatastore(this);
+//
+//        ParseObject.registerSubclass(ParsePantry.class);
+//        Parse.initialize(this, "Ntyum0Q9BoJ5TPTumeztgJTNM7ErmYhdfYVDe2lu", "wRWMqxsHldxfP6Rfs4mjlPDd8kdcybOBX59lu5mx");
+//
+//        ParseUser.enableAutomaticUser();
+//        ParseACL defaultACL = new ParseACL();
+//        ParseACL.setDefaultACL(defaultACL, true);
+//
+//        ParsePantry testObject = new ParsePantry();
+//        testObject.setTitle("test");
+//        testObject.setAuthor(ParseUser.getCurrentUser());
+//        testObject.saveInBackground();
 
             String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
 
             //Download grocery database JSON from internet
-            final DownloadDataTask downloadGroceries = new DownloadDataTask(MainActivity.this);
+            final DownloadDataTask downloadGroceries = new DownloadDataTask(ActivityMain.this);
 
             try {
                 jsonString = downloadGroceries.execute(dataUrl).get();

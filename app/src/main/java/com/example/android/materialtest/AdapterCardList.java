@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.ParseUser;
+
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.TreeMap;
@@ -17,14 +19,14 @@ import java.util.TreeMap;
 /**
  * Created by Prince on 7/24/15.
  */
-public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardViewHolder> {
+public class AdapterCardList extends RecyclerView.Adapter<AdapterCardList.CardViewHolder> {
 
     private Map<String, ArrayList<String>> total = new TreeMap<>();
     private Context _context;
 
     // Allows us to pass in the array list
     // Could have used the this keyword but I was lazy
-    public CardListAdapter(Context context, GroceryStore groceryStore){
+    public AdapterCardList(Context context, GroceryStore groceryStore){
 
         total = groceryStore.getCategories();
         this._context = context;
@@ -52,7 +54,14 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         cardViewHolder.mItem1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                GroceryListAdapter.addToList((String) cardViewHolder.mItem1.getText());
+                AdapterGroceryList.addToList((String) cardViewHolder.mItem1.getText());
+
+                ParsePantry obj = new ParsePantry();
+                obj.setTitle(cardViewHolder.mItem1.getText().toString());
+                obj.setAuthor(ParseUser.getCurrentUser());
+                obj.saveInBackground();
+
+
                 CharSequence text = cardViewHolder.mItem1.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
@@ -65,7 +74,12 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         cardViewHolder.mItem2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                GroceryListAdapter.addToList((String) cardViewHolder.mItem2.getText());
+                ParsePantry obj = new ParsePantry();
+                obj.setTitle(cardViewHolder.mItem2.getText().toString());
+                obj.setAuthor(ParseUser.getCurrentUser());
+                obj.saveInBackground();
+
+                AdapterGroceryList.addToList((String) cardViewHolder.mItem2.getText());
                 CharSequence text = cardViewHolder.mItem2.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
@@ -78,7 +92,12 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
         cardViewHolder.mItem3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                GroceryListAdapter.addToList((String) cardViewHolder.mItem3.getText());
+                ParsePantry obj = new ParsePantry();
+                obj.setTitle(cardViewHolder.mItem3.getText().toString());
+                obj.setAuthor(ParseUser.getCurrentUser());
+                obj.saveInBackground();
+
+                AdapterGroceryList.addToList((String) cardViewHolder.mItem3.getText());
                 CharSequence text = cardViewHolder.mItem3.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
@@ -94,7 +113,7 @@ public class CardListAdapter extends RecyclerView.Adapter<CardListAdapter.CardVi
                     @Override
                     public void onClick(View v) {
 
-                        Intent intent = new Intent(_context, TotalListActivity.class);
+                        Intent intent = new Intent(_context, ActivityTotalList.class);
                         intent.putExtra("category", (String) cardViewHolder.mCategory.getText());
                         _context.startActivity(intent);
                     }

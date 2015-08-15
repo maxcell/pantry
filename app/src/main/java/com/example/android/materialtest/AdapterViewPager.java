@@ -13,7 +13,7 @@ import android.text.style.ImageSpan;
 /**
  * Created by Prince on 7/29/15.
  */
-public class ViewPagerAdapter extends FragmentStatePagerAdapter {
+public class AdapterViewPager extends FragmentStatePagerAdapter {
 
     private CharSequence Titles[];  //Stores the titles of each tab passed to the ViewPagerAdapter
     private int nTabs;              // Stores the number of tabs
@@ -26,7 +26,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             R.drawable.ic_shopping_cart_dark,
     };
 
-    public ViewPagerAdapter(FragmentManager fm, CharSequence mTitles[], int nNumOfTabs, Context context) {
+    public AdapterViewPager(FragmentManager fm, CharSequence mTitles[], int nNumOfTabs, Context context) {
         super(fm);
 
         this.Titles = mTitles;
@@ -38,11 +38,11 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
 
         if( position == 0 ){
-            CardListFragment cardList = new CardListFragment();
+            FragmentCardList cardList = new FragmentCardList();
             return cardList;
         }
         else {
-            GroceryListFragment groceryList = new GroceryListFragment();
+            FragmentGroceryList groceryList = new FragmentGroceryList();
             return groceryList;
         }
     }

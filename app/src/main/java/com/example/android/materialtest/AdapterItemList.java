@@ -14,12 +14,12 @@ import java.util.TreeMap;
 /**
  * Created by Prince on 8/3/15.
  */
-public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.TextViewHolder> {
+public class AdapterItemList extends RecyclerView.Adapter<AdapterItemList.TextViewHolder> {
     private Context _context;
     private String _category;
     private TreeMap<String, ArrayList<String>> items;
 
-    public ItemListAdapter(Context context, GroceryStore groceryStore, String category){
+    public AdapterItemList(Context context, GroceryStore groceryStore, String category){
         this._context = context;
         this.items = groceryStore.getCategories();
         this._category = category;
@@ -43,7 +43,7 @@ public class ItemListAdapter extends RecyclerView.Adapter<ItemListAdapter.TextVi
             public void onClick(View view) {
 
 
-                GroceryListAdapter.addToList((String) holder.mItem.getText());
+                AdapterGroceryList.addToList((String) holder.mItem.getText());
                 CharSequence text = holder.mItem.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);

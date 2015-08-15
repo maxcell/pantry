@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by Justin on 8/4/15.
  */
-public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.TextViewHolder> implements ItemTouchHelperAdapter{
+public class AdapterGroceryList extends RecyclerView.Adapter<AdapterGroceryList.TextViewHolder> implements ItemTouchHelperAdapter{
     private Context _context;
     private static ArrayList<String> userList;
 
@@ -23,7 +23,7 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.
     @Override
     public void onItemDismiss(int position) {
         remove(getItem(position));
-        GroceryListFragment.mAdapter.notifyDataSetChanged();
+        FragmentGroceryList.mAdapter.notifyDataSetChanged();
     }
 
     // Provide a reference to the views for each data item
@@ -40,13 +40,13 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public GroceryListAdapter(Context context, ArrayList<String> data) {
+    public AdapterGroceryList(Context context, ArrayList<String> data) {
         this._context = context;
         userList = data;
     }
     // Create new views (invoked by the layout manager)
     @Override
-    public GroceryListAdapter.TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public AdapterGroceryList.TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
     TextView v = (TextView) LayoutInflater.from(parent.getContext())
@@ -75,14 +75,14 @@ public class GroceryListAdapter extends RecyclerView.Adapter<GroceryListAdapter.
     public static void addToList(String s){
         if(! userList.contains(s)) {
             userList.add(s);
-            GroceryListFragment.mAdapter.notifyDataSetChanged();
+            FragmentGroceryList.mAdapter.notifyDataSetChanged();
         }
     }
 
     public static void remove(String s){
         if(userList.contains(s)){
             userList.remove(s);
-            GroceryListFragment.mAdapter.notifyDataSetChanged();
+            FragmentGroceryList.mAdapter.notifyDataSetChanged();
         }
     }
 

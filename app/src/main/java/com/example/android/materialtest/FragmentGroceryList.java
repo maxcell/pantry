@@ -16,9 +16,9 @@ import java.util.ArrayList;
  * Created by Prince on 7/29/15.
  * Refactored and re-tooled by Justin on 8/4/15.
  */
-public class GroceryListFragment extends Fragment{
+public class FragmentGroceryList extends Fragment{
 
-    public static GroceryListAdapter mAdapter;
+    public static AdapterGroceryList mAdapter;
     public View view;
     public ArrayList<String> data;
 
@@ -29,7 +29,7 @@ public class GroceryListFragment extends Fragment{
         if (savedInstanceState != null) {
             data = savedInstanceState.getStringArrayList("groceryListKey");
             if (data != null) {
-                mAdapter = new GroceryListAdapter(getActivity(), data);
+                mAdapter = new AdapterGroceryList(getActivity(), data);
             }
 
         }
@@ -42,7 +42,7 @@ public class GroceryListFragment extends Fragment{
 
         if(data == null) {
             data = new ArrayList<String>();
-            mAdapter = new GroceryListAdapter(getActivity(), data);
+            mAdapter = new AdapterGroceryList(getActivity(), data);
         }
 
         grocList.setAdapter(mAdapter);

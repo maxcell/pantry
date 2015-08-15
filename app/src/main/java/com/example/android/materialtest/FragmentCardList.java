@@ -24,7 +24,7 @@ import java.util.TreeMap;
  * Created by Prince on 7/28/15.
  * Access MainActivity.jsonString added 8/11/15
  */
-public class CardListFragment extends Fragment {
+public class FragmentCardList extends Fragment {
 
     public View view;
     public interface ITalkToFragment { //the fragment to which this interface communicates implements CursorLoader
@@ -56,7 +56,7 @@ public class CardListFragment extends Fragment {
 
         // Makes us use the CardListAdapter
         // How we will convert the information for the app
-        recList.setAdapter(new CardListAdapter(getActivity(), groceryStore));
+        recList.setAdapter(new AdapterCardList(getActivity(), groceryStore));
 
         // Return the view of our fragment
         return view;
@@ -97,7 +97,7 @@ public class CardListFragment extends Fragment {
             //JSONObject obj = new JSONObject(readFile());
 
             // Build a JSON Object from the MainActivity input
-            JSONObject obj = new JSONObject(MainActivity.jsonString);
+            JSONObject obj = new JSONObject(ActivityMain.jsonString);
 
             // Read the array from the object
             JSONArray mJSONArray = obj.getJSONArray("groceries");
