@@ -7,12 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ac0990f-b91b-46ad-a90e-50e6972ec7a0" name="Default" comment="">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/activity_main.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_cardlist.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout-xlarge/fragment_grocerylist.xml" />
-=======
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/android/pantry/BuildConfig.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/android/pantry/MainActivity.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/example/android/pantry/MyExpandableAdapter$1.class" afterPath="" />
@@ -682,6 +680,9 @@
 >>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+=======
+    <list default="true" id="6ac0990f-b91b-46ad-a90e-50e6972ec7a0" name="Default" comment="" />
+>>>>>>> 7bf5522cc8d66e1c3b3f9a60feb9c192ab73dfe7
     <ignored path="Pantry.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -872,9 +873,14 @@
       <file leaf-file-name="GroceryListFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state vertical-scroll-proportion="0.990566">
               <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
 >>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
+=======
+            <state vertical-scroll-proportion="0.5943396">
+              <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+>>>>>>> 7bf5522cc8d66e1c3b3f9a60feb9c192ab73dfe7
               <folding />
             </state>
           </provider>
@@ -3827,8 +3833,8 @@
 =======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/materialtest/GroceryListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.990566">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.5943396">
+          <caret line="31" column="71" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
           <folding />
 >>>>>>> 178c1b67d8a4f06dfb153b8009508a8918a413e9
         </state>
