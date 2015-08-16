@@ -20,8 +20,6 @@ public class ActivityTotalList extends AppCompatActivity {
         setContentView(R.layout.total_list);
         setupToolbar();
 
-
-
         RecyclerView recList = (RecyclerView) findViewById(R.id.Recycler_ItemList);
         recList.addItemDecoration(new TotalDividerItemDecoration(getBaseContext().getApplicationContext()));
         recList.setHasFixedSize(true);

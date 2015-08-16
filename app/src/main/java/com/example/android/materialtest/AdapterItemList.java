@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parse.ParseUser;
+
 import java.util.ArrayList;
 import java.util.TreeMap;
 
@@ -18,11 +20,13 @@ public class AdapterItemList extends RecyclerView.Adapter<AdapterItemList.TextVi
     private Context _context;
     private String _category;
     private TreeMap<String, ArrayList<String>> items;
+    private ArrayList<String> userList;
 
     public AdapterItemList(Context context, GroceryStore groceryStore, String category){
         this._context = context;
         this.items = groceryStore.getCategories();
         this._category = category;
+        userList = ParseHelper.getUserData();
     }
 
     @Override
@@ -43,11 +47,18 @@ public class AdapterItemList extends RecyclerView.Adapter<AdapterItemList.TextVi
             public void onClick(View view) {
 
 
-                AdapterGroceryList.addToList((String) holder.mItem.getText());
-                CharSequence text = holder.mItem.getText() + " added to grocery list. Yum!";
-                int duration = Toast.LENGTH_SHORT;
-                Toast toast = Toast.makeText(_context, text, duration);
-                toast.show();
+                ParsePantry obj = new ParsePantry();
+                obj.setTitle(holder.mItem.getText().toString());
+                obj.setAuthor(ParseUser.getCurrentUser());
+                obj.pinInBackground();
+
+                if(!userList.contains(holder.mItem.getText())) {
+                    AdapterGroceryList.addToList((String) holder.mItem.getText());
+                    CharSequence text = holder.mItem.getText() + " added to grocery list. Yum!";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(_context, text, duration);
+                    toast.show();
+                }
             }
         });
     }

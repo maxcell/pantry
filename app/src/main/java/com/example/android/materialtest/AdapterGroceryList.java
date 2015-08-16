@@ -22,7 +22,8 @@ public class AdapterGroceryList extends RecyclerView.Adapter<AdapterGroceryList.
 
     @Override
     public void onItemDismiss(int position) {
-        remove(getItem(position));
+        String item = getItem(position);
+        remove(item);
         FragmentGroceryList.mAdapter.notifyDataSetChanged();
     }
 
@@ -49,14 +50,14 @@ public class AdapterGroceryList extends RecyclerView.Adapter<AdapterGroceryList.
     public AdapterGroceryList.TextViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
 
-    TextView v = (TextView) LayoutInflater.from(parent.getContext())
-            .inflate(R.layout.item_view, parent, false);
+        TextView v = (TextView) LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_view, parent, false);
 
-    TextViewHolder vh = new TextViewHolder(v);
+        TextViewHolder vh = new TextViewHolder(v);
 
-    return vh;
+        return vh;
 
-}
+    }
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(TextViewHolder holder, int position) {
@@ -82,6 +83,7 @@ public class AdapterGroceryList extends RecyclerView.Adapter<AdapterGroceryList.
     public static void remove(String s){
         if(userList.contains(s)){
             userList.remove(s);
+            ParseHelper.deleteFromParse(s);
             FragmentGroceryList.mAdapter.notifyDataSetChanged();
         }
     }

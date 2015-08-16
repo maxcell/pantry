@@ -27,7 +27,6 @@ import tabs.SlidingTabLayout;
 
 
 public class ActivityMain extends AppCompatActivity implements FragmentCardList.ITalkToFragment{
-
     private ViewPager mPager;
     private AdapterViewPager adapter;
     private SlidingTabLayout mTabs;
@@ -48,20 +47,20 @@ public class ActivityMain extends AppCompatActivity implements FragmentCardList.
         setupToolbar();
 
 
-            mPager = (ViewPager) findViewById(R.id.pager);
-            adapter = new AdapterViewPager(getSupportFragmentManager(), titles, n, this);
-            mPager.setAdapter(adapter);
+        mPager = (ViewPager) findViewById(R.id.pager);
+        adapter = new AdapterViewPager(getSupportFragmentManager(), titles, n, this);
+        mPager.setAdapter(adapter);
 
-            mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
-            mTabs.setCustomTabView(R.layout.custom_tab, 0);
-            mTabs.setDistributeEvenly(true);
+        mTabs = (SlidingTabLayout) findViewById(R.id.tabs);
+        mTabs.setCustomTabView(R.layout.custom_tab, 0);
+        mTabs.setDistributeEvenly(true);
 
-            mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
+        mTabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
 
-                public int getIndicatorColor(int position) {
-                    return getResources().getColor(R.color.my_secondary_text);
-                }
-            });
+            public int getIndicatorColor(int position) {
+                return getResources().getColor(R.color.my_secondary_text);
+            }
+        });
 
         if (!((getResources().getConfiguration().screenLayout & Configuration.SCREENLAYOUT_SIZE_MASK)
                 >= Configuration.SCREENLAYOUT_SIZE_LARGE)) {
@@ -73,37 +72,23 @@ public class ActivityMain extends AppCompatActivity implements FragmentCardList.
                 mTabs.setViewPager(mPager);
             }
         }
-
-        // Enable Local Datastore.
-//        Parse.enableLocalDatastore(this);
-//
-//        ParseObject.registerSubclass(ParsePantry.class);
-//        Parse.initialize(this, "Ntyum0Q9BoJ5TPTumeztgJTNM7ErmYhdfYVDe2lu", "wRWMqxsHldxfP6Rfs4mjlPDd8kdcybOBX59lu5mx");
-//
-//        ParseUser.enableAutomaticUser();
-//        ParseACL defaultACL = new ParseACL();
-//        ParseACL.setDefaultACL(defaultACL, true);
-//
-//        ParsePantry testObject = new ParsePantry();
-//        testObject.setTitle("test");
-//        testObject.setAuthor(ParseUser.getCurrentUser());
-//        testObject.saveInBackground();
-
-            String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
-
-            //Download grocery database JSON from internet
-            final DownloadDataTask downloadGroceries = new DownloadDataTask(ActivityMain.this);
-
-            try {
-                jsonString = downloadGroceries.execute(dataUrl).get();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            }
+        ParseUser.enableAutomaticUser();
+        ParseACL defaultACL = new ParseACL();
+        ParseACL.setDefaultACL(defaultACL, true);
 
 
+        String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
 
+        //Download grocery database JSON from internet
+        final DownloadDataTask downloadGroceries = new DownloadDataTask(ActivityMain.this);
+
+        try {
+            jsonString = downloadGroceries.execute(dataUrl).get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
     }
 

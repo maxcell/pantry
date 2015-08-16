@@ -23,6 +23,7 @@ public class AdapterCardList extends RecyclerView.Adapter<AdapterCardList.CardVi
 
     private Map<String, ArrayList<String>> total = new TreeMap<>();
     private Context _context;
+    private ArrayList<String> userList = ParseHelper.getUserData();
 
     // Allows us to pass in the array list
     // Could have used the this keyword but I was lazy
@@ -55,12 +56,13 @@ public class AdapterCardList extends RecyclerView.Adapter<AdapterCardList.CardVi
             public void onClick(View view) {
 
                 AdapterGroceryList.addToList((String) cardViewHolder.mItem1.getText());
+                if (!userList.contains(cardViewHolder.mItem1.getText())) {
 
-                ParsePantry obj = new ParsePantry();
-                obj.setTitle(cardViewHolder.mItem1.getText().toString());
-                obj.setAuthor(ParseUser.getCurrentUser());
-                obj.saveInBackground();
-
+                    ParsePantry obj = new ParsePantry();
+                    obj.setTitle(cardViewHolder.mItem1.getText().toString());
+                    obj.setAuthor(ParseUser.getCurrentUser());
+                    obj.pinInBackground();
+                }
 
                 CharSequence text = cardViewHolder.mItem1.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
@@ -74,12 +76,13 @@ public class AdapterCardList extends RecyclerView.Adapter<AdapterCardList.CardVi
         cardViewHolder.mItem2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                ParsePantry obj = new ParsePantry();
-                obj.setTitle(cardViewHolder.mItem2.getText().toString());
-                obj.setAuthor(ParseUser.getCurrentUser());
-                obj.saveInBackground();
-
                 AdapterGroceryList.addToList((String) cardViewHolder.mItem2.getText());
+                if(!userList.contains(cardViewHolder.mItem2.getText())) {
+                    ParsePantry obj = new ParsePantry();
+                    obj.setTitle(cardViewHolder.mItem2.getText().toString());
+                    obj.setAuthor(ParseUser.getCurrentUser());
+                    obj.pinInBackground();
+                }
                 CharSequence text = cardViewHolder.mItem2.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);
@@ -92,12 +95,14 @@ public class AdapterCardList extends RecyclerView.Adapter<AdapterCardList.CardVi
         cardViewHolder.mItem3.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 
-                ParsePantry obj = new ParsePantry();
-                obj.setTitle(cardViewHolder.mItem3.getText().toString());
-                obj.setAuthor(ParseUser.getCurrentUser());
-                obj.saveInBackground();
-
                 AdapterGroceryList.addToList((String) cardViewHolder.mItem3.getText());
+                if(!userList.contains(cardViewHolder.mItem3.getText())) {
+
+                    ParsePantry obj = new ParsePantry();
+                    obj.setTitle(cardViewHolder.mItem3.getText().toString());
+                    obj.setAuthor(ParseUser.getCurrentUser());
+                    obj.pinInBackground();
+                }
                 CharSequence text = cardViewHolder.mItem3.getText() + " added to grocery list. Yum!";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(_context, text, duration);

@@ -6,11 +6,18 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+import com.parse.ParseUser;
+
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Prince on 7/29/15.
@@ -26,26 +33,19 @@ public class FragmentGroceryList extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (savedInstanceState != null) {
-            data = savedInstanceState.getStringArrayList("groceryListKey");
-            if (data != null) {
-                mAdapter = new AdapterGroceryList(getActivity(), data);
-            }
-
-        }
-
         view = inflater.inflate(R.layout.fragment_grocerylist, container, false);
 
         RecyclerView grocList = (RecyclerView) view.findViewById(R.id.Recycler_GroceryList);
         grocList.setLayoutManager(new LinearLayoutManager(super.getActivity()));
         grocList.setHasFixedSize(true);
 
-        if(data == null) {
-            data = new ArrayList<String>();
-            mAdapter = new AdapterGroceryList(getActivity(), data);
-        }
+        data = ParseHelper.getUserData();
+
+
+        mAdapter = new AdapterGroceryList(getActivity(), data);
 
         grocList.setAdapter(mAdapter);
+        mAdapter.notifyDataSetChanged();
 
         ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mAdapter);
         ItemTouchHelper touchHelper = new ItemTouchHelper(callback);
@@ -60,27 +60,7 @@ public class FragmentGroceryList extends Fragment{
 
     }
 
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-////        if (view != null) {
-////            ViewGroup parentViewGroup = (ViewGroup) view.getParent();
-////            if (parentViewGroup != null) {
-////                parentViewGroup.removeAllViews();
-////            }
-////        }
-//    }
-//
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        if (view != null) {
-//            ViewGroup parentViewGroup = (ViewGroup) view.getParent();
-//            if (parentViewGroup != null) {
-//                parentViewGroup.removeAllViewsInLayout();
-//            }
-//        }
-//    }
+
 
 
 }

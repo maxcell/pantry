@@ -26,59 +26,53 @@ MERGED from com.android.support:support-v4:22.2.1:22:5
 	android:label
 		ADDED from AndroidManifest.xml:8:9
 	android:configChanges
-		ADDED from AndroidManifest.xml:10:9
+		ADDED from AndroidManifest.xml:11:9
 	android:allowBackup
 		ADDED from AndroidManifest.xml:6:9
 	android:icon
 		ADDED from AndroidManifest.xml:7:9
 	android:theme
 		ADDED from AndroidManifest.xml:9:9
+	android:name
+		ADDED from AndroidManifest.xml:10:9
 activity#com.example.android.materialtest.ActivityMain
-ADDED from AndroidManifest.xml:11:9
+ADDED from AndroidManifest.xml:12:9
 	android:label
+		ADDED from AndroidManifest.xml:14:13
+	android:name
 		ADDED from AndroidManifest.xml:13:13
-	android:name
-		ADDED from AndroidManifest.xml:12:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:14:13
+ADDED from AndroidManifest.xml:15:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:15:17
+ADDED from AndroidManifest.xml:16:17
 	android:name
-		ADDED from AndroidManifest.xml:15:25
+		ADDED from AndroidManifest.xml:16:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:17:17
+ADDED from AndroidManifest.xml:18:17
 	android:name
-		ADDED from AndroidManifest.xml:17:27
+		ADDED from AndroidManifest.xml:18:27
 activity#com.example.android.materialtest.ActivityTotalList
-ADDED from AndroidManifest.xml:20:9
+ADDED from AndroidManifest.xml:21:9
 	android:name
-		ADDED from AndroidManifest.xml:20:19
+		ADDED from AndroidManifest.xml:21:19
 supports-screens
-ADDED from AndroidManifest.xml:25:5
+ADDED from AndroidManifest.xml:26:5
 	android:smallScreens
-		ADDED from AndroidManifest.xml:28:9
-	android:normalScreens
-		ADDED from AndroidManifest.xml:27:9
-	android:xlargeScreens
-		ADDED from AndroidManifest.xml:26:9
-	android:anyDensity
 		ADDED from AndroidManifest.xml:29:9
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from AndroidManifest.xml:31:5
-	android:name
-		ADDED from AndroidManifest.xml:31:22
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+	android:normalScreens
+		ADDED from AndroidManifest.xml:28:9
+	android:xlargeScreens
+		ADDED from AndroidManifest.xml:27:9
+	android:anyDensity
+		ADDED from AndroidManifest.xml:30:9
+uses-permission#android.permission.INTERNET
 ADDED from AndroidManifest.xml:32:5
 	android:name
 		ADDED from AndroidManifest.xml:32:22
-uses-permission#android.permission.INTERNET
+uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from AndroidManifest.xml:33:5
 	android:name
 		ADDED from AndroidManifest.xml:33:22
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from AndroidManifest.xml:34:5
-	android:name
-		ADDED from AndroidManifest.xml:34:22
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.2.1:20:5
