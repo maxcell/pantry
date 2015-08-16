@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<View xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/grey_300"
-    android:layout_width="match_parent"
-    android:layout_height="1dp">
-
-</View><!-- From: file:/Users/Prince/Desktop/project/pantry/app/src/main/res/layout/divider_light.xml -->
