@@ -1,0 +1,89 @@
+{ "groceries":
+  [
+    {
+      "category": "Fruits",
+      "items": [
+        "Bananas",
+        "Cherries",
+        "Apples",
+        "Strawberries",
+        "Durian",
+        "Oranges",
+        "Kiwi",
+        "Papaya"
+      ]
+    },
+
+    {
+      "category": "Meat",
+      "items": [
+        "Chicken Breast",
+        "Steak",
+        "Turkey",
+        "Fish",
+        "Hot Dogs",
+        "Bacon",
+        "Turkey Bacon",
+        "Sausages"
+      ]
+    },
+
+    {
+      "category": "Vegetables",
+      "items": [
+        "Beets",
+        "Red Peppers",
+        "Radishes",
+        "Carrots",
+        "Pumpkin",
+        "Artichokes",
+        "Asparagus",
+        "Cauliflower",
+        "Turnips",
+        "Potatoes"
+      ]
+    },
+
+    {
+      "category": "Bakery",
+      "items": [
+        "Bread",
+        "Donuts",
+        "Cakes",
+        "Biscotti",
+        "Danish",
+        "Muffins",
+        "Scones"
+      ]
+    },
+
+    {
+        "category": "Dairy",
+        "items": [
+          "Cheese",
+          "Milk",
+          "Margarine",
+          "Vanilla Pudding",
+          "Yogurt",
+          "Cream",
+          "Jell-O"
+        ]
+    },
+
+    {
+      "category": "Beverages",
+      "items": [
+        "Water",
+        "Lemonade",
+        "Coffee",
+        "Tea",
+        "Gatorade",
+        "Apple Juice",
+        "Orange Juice",
+        "Coke",
+        "Pepsi"
+      ]
+    }
+    
+  ]
+}

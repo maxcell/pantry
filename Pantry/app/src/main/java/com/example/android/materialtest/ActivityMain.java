@@ -77,7 +77,7 @@ public class ActivityMain extends AppCompatActivity implements FragmentCardList.
         ParseACL.setDefaultACL(defaultACL, true);
 
 
-        String dataUrl = "http://maxwilson.me/materialTest/grocerydata.json";
+        String dataUrl = "http://maxwilson.me/pantry/grocerydata.json";
 
         //Download grocery database JSON from internet
         final DownloadDataTask downloadGroceries = new DownloadDataTask(ActivityMain.this);
