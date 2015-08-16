@@ -36,7 +36,7 @@ public class FragmentCardList extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //container.removeAllViews();
         // Setting up the RecyclerView with the given view
-        View view = inflater.inflate(R.layout.fragment_cardlist, container, false);
+        view = inflater.inflate(R.layout.fragment_cardlist, container, false);
 //        if (view.getParent() != null) {
 //            ((ViewGroup) view.getParent()).removeView(view);
 //        }
